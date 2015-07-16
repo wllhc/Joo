@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <include file="public:head"/>
+    <css file="__STATIC__/css/default/space.css"/>
+</head>
+
+<body>
+<div class="wrap">
+    <include file="public:header"/>
+    <div class="content">
+        <div class="cart">
+            <div class="cart_content">
+                <form action="{:U('Pay/cart2order')}" method="post">
+                    <div>
+                        <div class="settitle clearfix"><h2>我的购物车</h2><span></span></div>
+                        <div class="arrwhite"></div>
+                        <div class="cardcontent">
+                            <div class="carttitle">
+                                <table class="carttab">
+                                    <tr>
+                                        <td width="16">
+                                            <!--<input type="checkbox"/>-->
+                                        </td>
+                                        <td width="50">缩略图</td>
+                                        <td>图片名</td>
+                                        <td width="80">价格</td>
+                                        <td width="80">移除</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="cartcont">
+                                <table class="carttab">
+                                    <volist name="item" id="vo">
+                                        <tr>
+                                            <td width="16"><input type="checkbox"/></td>
+                                            <td width="50">
+                                                <input type="hidden" name="item_id[]" value="{$vo.id}"/>
+                                                <img src="./data/tumb/_thumb_280x_{$vo.uid}_{$vo.id}.jpg"/>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    <a href="{:U('item/index', array('id'=>$vo['id']))}">{$vo.title}</a>
+                                                </h4>
+                                            </td>
+                                            <td width="80">￥{$vo.price}</td>
+                                            <td width="80"><a href="#">移除</a></td>
+                                        </tr>
+                                    </volist>
+                                </table>
+                                <div class="cartoptbar clearfix">
+                                    <a href="#" class="btn_gray">删除所选商品</a>
+
+                                    <p>总计：<span>￥2584.00</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+                        <div class="btndiv">
+                            <a href="javascript:void(0);" class="btngreen" onclick="document.forms[0].submit();">去结算</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

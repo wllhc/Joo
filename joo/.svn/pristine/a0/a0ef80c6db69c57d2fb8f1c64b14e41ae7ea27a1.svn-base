@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+    <include file="public:head" />
+    <!--css file="__STATIC__/css/default/user.css" /-->
+</head>
+<body>
+<include file="public:header" />
+<!--设置头像的弹窗-->
+<div class="lightbox" style="display:none;">
+    <div class="lbbox" style="width:500px;">
+        <b class="closelightbox"></b>
+        <h2>上传您的头像</h2>
+        <div class="upavatar clearfix" id="altContent"></div>
+
+        <script type="text/javascript"
+        src="http://images1.jyimg.com/w4/register/j/swfobject.js"></script>
+        <script type="text/javascript">
+
+            function uploadevent(status){
+                status += '';
+                switch(status){
+
+                    case '1':
+                        alert('修改成功！!');
+                        var time = new Date().getTime();
+                        //document.getElementById('avatar_priview').innerHTML = "<img src='__APP__/Avatar/user_avatar/uid/{{$_SESSION['uid']}}/'/>";
+                        // $('.i_avatar').attr('src', "__APP__/Avatar/user_avatar/uid/{{$_SESSION['uid']}}/");
+                        $.ajax({
+                            url: "__APP__/Avatar/user_avatar/uid/{{$_SESSION['uid']}}/",
+                            success: function(){
+                                window.location = location;
+                                //document.getElementById('avatar_priview').innerHTML = "Avatar Priview: <img src='__APP__/Avatar/user_avatar/uid/{{$_SESSION['uid']}}/'/>";
+                            }
+                        });
+					
+                        break;
+
+                    case '2':
+                        if(confirm('js call upload')){
+                            return 1;
+                        }else{
+                            return 0;
+                        }
+                        break;
+
+                    case '-1':
+                        alert('cancel!');
+                        window.location.href = "#";
+                        break;
+                    case '-2':
+                        alert('upload failed!');
+                        window.location.href = "#";
+                        break;
+
+                    default:
+                        alert(typeof(status) + ' ' + status);
+                } 
+            }
+
+            var flashvars = {
+                "jsfunc":"uploadevent",
+                "imgUrl":"http://i3.sinaimg.cn/lx/news/p/2009/0717/U2075P8T1D890333F914DT20090717103223.jpg",
+                "pid":"75642723",
+                "uploadSrc":true,
+                "showBrow":true,
+                "showCame":true,
+                "uploadUrl":"__APP__/Avatar/saveavater/action/uploadavatar",
+                "pSize": "300|300|120|120|80|80|45|45"
+            };
+
+            var params = {
+                menu: "false",
+                scale: "noScale",
+                allowFullscreen: "true",
+                allowScriptAccess: "always",
+                wmode:"transparent",
+                bgcolor: "#FFFFFF"
+            };
+
+            var attributes = {
+                id:"FaustCplus"
+            };
+
+            swfobject.embedSWF("__STATIC__/FaustCplus/FaustCplus.swf", "altContent", "650", "500", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+
+        </script>
+
+    </div>
+</div>
+
+<div class="content">
+    <div class="settings clearfix">
+        <include file="user:left" />
+
+        <div class="set_content">
+            <div>
+                <div class="settitle clearfix"><h3>{:L('base_info')}</h3><span></span></div>
+                <div class="arrwhite"></div>
+                <div class="cardcontent">
+                    <div class="myinfo">
+                        <div class="myavartar clearfix">
+                            <form id="J_basic_form" action="{:U('user/index')}" method="post">
+                            <h3 class="setobj"><span>{:L('change_avatar')}</span></h3>
+                            <div class="myavatarimg">
+                                <img src="{:avatar($info['id'], 100)}" />
+                                <a href="#" class="buttongray">{:L('change_avatar')}</a>
+                            </div>
+                            <h3 class="setobj"><span>其他信息</span></h3>
+
+                            <div class="setbox mail">
+                                <h2>{:L('email')}：</h2>
+                                <p><input type="text" name="email" class="setinput" value="{$info.email}" /></p>
+                            </div>
+                            <div class="setbox person">
+                                <h2>{:L('username')}：</h2>
+                                <p><b>{$info.username}</b></p>
+                            </div>
+                            <div class="setbox person">
+                                <h2>{:L('gender')}：</h2>
+                                <p>
+                                    <input name="gender" value="0" type="radio" <if condition="$info['gender'] eq '0'">checked</if>>&nbsp;{:L('female')}
+                                    <input name="gender" value="1" type="radio" <if condition="$info['gender'] eq '1'">checked</if>>&nbsp;{:L('male')}
+                                </p>
+                            </div>
+                            <div class="setbox person clearfix">
+                                <h2>{:L('birthday')}：</h2>
+                                <div class="posi"><select><option>2009</option></select><span></span></div>
+                                <div class="posi"><select><option>08</option></select><span></span></div>
+                                <div class="posi"><select><option>29</option></select><span></span></div>
+                            </div>
+                            <div class="setbox person">
+                                <h2>{:L('my_intro')}：</h2>
+                                <p><textarea name="intro" rows="10" placeholder="请输入自我介绍" class="gray_text">{$info.intro}</textarea></p>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="btndiv">
+                    <a href="#" class="btngreen">保存 修改</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主部结束-->
+<include file="public:footer" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/js/calendar/calendar-blue.css"/>
+<script src="__STATIC__/js/calendar/calendar.js"></script>
+<script src="__STATIC__/js/setting.js"></script>
+<script src="__STATIC__/js/minicity.js"></script>
+<script>
+    $(function(){
+        $.minicity( "#J_province", "#J_city", "<?php echo $info['province'];?>", "<?php echo $info['city'];?>");
+    });
+</script>
+</body>
+</html>

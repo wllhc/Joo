@@ -1,0 +1,127 @@
+<?php
+class indexAction extends frontendAction {
+    
+    public function index() {
+        //分类
+        if (false === $index_cate_list = F('index_cate_list')) {
+            $item_cate_mod = M('item_cate');
+            //分类关系
+            if (false === $cate_relate = F('cate_relate')) {
+                $cate_relate = D('item_cate')->relate_cache();
+            }
+            //分类缓存
+            if (false === $cate_data = F('cate_data')) {
+                $cate_data = D('item_cate')->cate_data_cache();
+            }
+            //推荐到首页的大类
+            $index_cate_list = $item_cate_mod->field('id,name,img')->where(array('pid'=>'0' ,'is_index'=>'1', 'status'=>'1'))->order('ordid')->select();
+            foreach ($index_cate_list as $key=>$val) {
+                //推荐到首页的子类
+                $where = array('status'=>'1', 'is_index'=>'1', 'spid'=>array('like', $val['id'] . '|%'));
+                $index_cate_list[$key]['index_sub'] = $item_cate_mod->field('id,name,img')->where($where)->order('ordid')->select();
+                //普通子类
+                $index_cate_list[$key]['sub'] = array();
+                foreach ($cate_relate[$val['id']]['sids'] as $sid) {
+                    if ($cate_data[$sid]['type'] == '0' && $cate_data[$sid]['pid'] != $val['id']) {
+                        $index_cate_list[$key]['sub'][] = $cate_data[$sid];
+                    }
+                    if (count($index_cate_list[$key]['sub']) >= 6) {
+                        break;
+                    }
+                }
+            }
+            F('index_cate_list', $index_cate_list);
+        }
+
+        //发现
+        $hot_tags = explode(',', C('pin_hot_tags')); //热门标签
+        $hot_tags = array_slice($hot_tags, 0, 12);
+
+        $sort = $this->_get('sort', 'trim', 'hot'); //排序
+        //排序：最热(hot)，最新(new)
+        switch ($sort) {
+            case 'hot':
+                $order = 'hits DESC,id DESC';
+                break;
+            case 'new':
+                $order = 'id DESC';
+                break;
+        }
+        $this->waterfall('', $order, '', C('pin_book_page_max'), 'book/index');
+
+        $this->assign('index_cate_list', $index_cate_list);
+        $this->assign('cur_sort', $sort);
+        $this->assign('hot_tags', $hot_tags);
+        $this->assign('nav_curr', 'index');
+        $this->_config_seo();
+        $this->display();
+        //$this->display('indexold');
+    }
+
+    public function find() {
+        $type = $this->_get('type', 'trim', 'hot'); //排序
+        if ('hot' == $type) {
+            $sort = "hits DESC,id DESC"; // 最热,默认
+        } else {
+            $sort = "id DESC"; // 最新
+        }
+        $res = $this->_waterfall('', $sort, '', C('pin_book_page_max'), 'book/index');
+        
+        echo json_encode($res);
+    }
+
+
+    /**
+     * 瀑布显示
+     */
+    protected function _waterfall($where = array(), $order = 'id DESC', $field = '', $page_max = '', $target = '') {
+        $spage_size = C('pin_wall_spage_size'); //每次加载个数
+        $spage_max = C('pin_wall_spage_max'); //每页加载次数
+        $page_size = $spage_size * $spage_max; //每页显示个数
+        
+        $item_mod = M('item');
+        $where_init = array('status'=>'1');
+        $where = $where ? array_merge($where_init, $where) : $where_init;
+        $count = $item_mod->where($where)->count('id');
+        //控制最多显示多少页
+        if ($page_max && $count > $page_max * $page_size) {
+            $count = $page_max * $page_size;
+        }
+        //查询字段
+        $field == '' && $field = 'id,uid,uname,title,intro,img,price,likes,comments,comments_cache';
+        //分页
+        $pager = $this->_pager($count, $page_size);
+        $target && $pager->path = $target;
+        $item_list = $item_mod->field($field)->where($where)->order($order)->limit($pager->firstRow.','.$spage_size)->select();
+        foreach ($item_list as $key=>$val) {
+            isset($val['comments_cache']) && $item_list[$key]['comment_list'] = unserialize($val['comments_cache']);
+        }
+        //$this->assign('item_list', $item_list);
+        //当前页码
+        $p = $this->_get('p', 'intval', 1);
+        //$this->assign('p', $p);
+        //当前页面总数大于单次加载数才会执行动态加载
+        $show_load = 0;
+        if (($count - ($p-1) * $page_size) > $spage_size) {
+            //$this->assign('show_load', 1);
+            $show_load = 1;
+        }
+        //总数大于单页数才显示分页
+        $count > $page_size && $this->assign('page_bar', $pager->fshow());
+        //最后一页分页处理
+        $show_page = 0;
+        if ((count($item_list) + $page_size * ($p-1)) == $count) {
+            //$this->assign('show_page', 1);
+            $show_page = 1;
+        }
+
+        return array(
+            'res' => 0,
+            'item_list' => $item_list,
+            'p' => $p,
+            'show_load' => $show_load,
+            'show_page' => $show_page,
+        );
+    }
+
+}

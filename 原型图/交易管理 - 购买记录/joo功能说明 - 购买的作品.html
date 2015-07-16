@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 3.3.1 (300245)"/><meta name="keywords" content="joo"/><meta name="created" content="2013-06-07 09:20:20 +0000"/><meta name="updated" content="2013-06-07 17:19:26 +0000"/><title>joo功能说明 - 购买的作品</title></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div><span style="font-size: 24px;">用户中心--交易管理--购买记录</span></div>
+<div><span style="font-size: 24px;"><br/></span></div>
+<div><span style="font-size: 18px;">页面草图：</span></div>
+<div><br/></div>
+<div><img src="joo%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E%20-%20%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BD%9C%E5%93%81.resources/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83-%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95.png" height="1394" width="1089"/><br/></div>
+<br/>
+<div><br/></div>
+<div><br/>
+<div><span style="font-size: 18px;">功能需求说明：</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">1.     普通用户点击【交易记录】链接，默认打开[购买记录]模块</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">2.     [全选]     允许全选当页的所有订单，进行合并付款     </span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">3.     [搜索]     用户可通过时间轴来指定搜索范围，checkbox列表中包含 <b>[作品名称]、[作者昵称]、[订单号]、[订单状态] </b>这四项</span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;">               3.1     可以通过作品名称、作者昵称、订单号来进行文字检索，这部分信息在交易完毕后入sphinx索引库</span></div>
+<div><span style="font-size: 14px;">          </span></div>
+<div><span style="font-size: 14px;">               3.2     订单状态包含 <b>[等待付款]、[已付款]、</b><b>[已完成]、</b><b>[已关闭] 四</b>种状态</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               3.3     当在checkbox中选择了[订单状态]时，后面的搜索条变成下拉菜单，菜单内容包括那四种订单状态</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               3.4     根据用户的搜索内容在下方显示匹配的订单</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">4.     [订单]     每一个订单只能对应一个摄影师，根据购买的作品中所对应的摄影师来生成单独的订单，一个订单中可以包含这个摄影师的多个作品</span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;">               4.1     订单号，在用户浏览图片时点击[直接购买]或在购物车中点击购买后由系统生成，绝对不允许重复；</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               4.2     头像，作品所属摄影师的头像（50*50px），鼠标放到头像后显示摄影师的昵称</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               4.3     交易时间，订单确认时间，精确到秒。用户在浏览图片时点击购买后，有一个确认订单页面，在确认订单页面点击确认购买后，点击[提交订单]即生成此交易时间</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               4.4     作品数量，当前订单中包含几幅作品 。  </span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               4.5     状态，订单当前的情况，目前设计中包含 <b>[等待付款]、</b><b>[已完成]、</b><b>[已关闭] 三</b>种</span></div>
+<div><span style="font-size: 14px;">                         4.5.1     [等待付款]     用户提交了订单，还没有付款之前的状态。该状态从订单生成后总共保留3天，即72小时 * 3600 秒 =259200秒，如用户在这个时间段内一直                                        </span></div>
+<div><span style="font-size: 14px;">                                                           未付款，则该订单状态转为[已关闭] 。</span></div>
+<div><span style="font-size: 14px;">                         </span></div>
+<div><span style="font-size: 14px;">                         4.5.2     [已付款]     当用户通过账户余额或通过其他支付方式成功支付款项后，系统需根据作品id将原图从原图桶中取出并放置到临时桶中，生成临时下载url；并将改订单的状态修      </span></div>
+<div><span style="font-size: 14px;">                                                       改为[已完成] </span></div>
+<div><span style="font-size: 14px;">            <br/></span></div>
+<div><span style="font-size: 14px;">                         4.5.3     [已完成]       当用户在[已付款]状态订单中点击[确认收货]后，或者用户虽然并为对该[已付款]状态订单进行[确认收货]操作，但该订单在[已付款]状态中超过了1天即86400</span></div>
+<div><span style="font-size: 14px;">                                                       秒，则改订单自动将状态更新为[已完成]，并将分成后的摄影师所得计入其账户中。</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">                         4.5.4     [已关闭]     几种使订单状态变为[已关闭]的情况</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">                                                       4.5.3.1    如4.5.1中描述，如果用户在提交订单后，并超过订单生存期还未付款，则该订单状态变为[已关闭]</span></div>
+<div><span style="font-size: 14px;">                                                       </span></div>
+<div><span style="font-size: 14px;">                                                       4.5.3.2    如订单中只有1副作品，并且用户点击了[取消购买]，则该订单状态变为[已关闭]</span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;">                                                       4.5.3.3    如订单中有多副作品，用户对所有作品点击了[取消购买]或在合并操作模块中点击了[取消购买]，则该订单状态变为[已关闭]</span></div>
+<div><span style="font-size: 14px;">                                                            </span></div>
+<div><span style="font-size: 14px;">               4.6     总价，作品价格之和。 当订单中有多幅作品，用户对其中N副作品进行了[取消购买]的操作，则在页面刷新之后，在总价中减去被[取消购买]的作品价格并呈现结果。</span></div>
+<div><span style="font-size: 14px;">     </span></div>
+<div><span style="font-size: 14px;">               4.7     展开 | 收起，默认展开状态，点击 - 收起该订单所包含的作品列表</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">5.      作品相关参数         </span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               5.1     作品缩略图，暂约定为 100 * 100px，设计师根据页面布局最终确定</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               5.2     作品名称，名称文字最长显示为10个中文字符长度，多出来的字符以…显示，鼠标移动后显示全称</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               5.3     大小，显示该作品实际大小，1024k以上以m为单位显示</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               5.4     尺寸，显示该作品的实际尺寸，以px为单位</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               5.5     价格，该作品所出售的价格，以胶圈儿为单位。1 焦圈儿 =  1 元人民币。  </span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">6.      针对作品的操作                    </span></div>
+<div><span style="font-size: 14px;">     </span></div>
+<div><span style="font-size: 14px;">               6.1     查看详情，打开新标签页面，显示当前订单详细情况</span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;">               6.2     下载作品，已完成交易订单中的作品允许被下载，被允许下载的作品存放在临时桶中，该作品在临时桶中的存放时间为1周。也就是说，用户购买了该作品后，有一周的时间下载自</span></div>
+<div><span style="font-size: 14px;">                         己购买的作品，如果超过一周，作品则从临时桶中被删除，[下载作品]按钮则变为[申请下载]。</span></div>
+<div><span style="font-size: 14px;">               </span></div>
+<div><span style="font-size: 14px;">               6.3     申请下载，为了网站存储空间的有效利用，超过下载时间的作品会被从临时桶中删除，如果用户依然有下载的需要，则可以提交申请下载，并说明原因，系统则再次将该作品放到临</span></div>
+<div><span style="font-size: 14px;">                         时桶中供用户下载，时间依然为1周，超过该时间后，作品会再次被从临时桶中删除。</span></div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               6.4     取消购买，当用户因为某种原因不打算为这个作品付款的话，可以取消本次购买动作，点击[取消购买]后，弹出对话框让用户选择或填写取消购买的原因，以用来告知摄影师和系统</span></div>
+<div><span style="font-size: 14px;">                         存档。</span></div>
+</div>
+<div><span style="font-size: 14px;"><br/></span></div>
+<div><span style="font-size: 14px;">               6.5     付款，目前版本支持支付宝直接付款和账户余额付款。成功付款后，系统根据分成比例将该订单对应比例的金额计入摄影师账户，并根据用户选择进行通知，同时记录在这个订单</span></div>
+<div><span style="font-size: 14px;">                         中，本站总收入金额、摄影师分成金额以及本站实际收入金额；<b>本站实际收入=总收入 - 摄影师分成</b></span></div>
+<div><b style="font-size: 14px;">               </b></div>
+<div><span style="font-size: 14px;"><b>             </b>  6.6<b>     </b>批量下载，当用户购买多幅作品时，可以使用批量下载进行保存。<font color="#FF7E79">（该功能大家讨论后根据实现难度考虑是否需要在本版中实现）</font></span></div>
+<div><font color="#FF7E79" style="font-size: 14px;"><br/></font></div>
+<div><font color="#424242" style="font-size: 14px;">               6.7     确认收货，当该订单用户已付款后，用户在下载该作品确认无误后，点击[确认收货]，摄影师便会立即收到相应的款项，以此来鼓励摄影师的创作激情，而且可以在确认收货对话框</font></div>
+<div><span style="font-size: 14px;"><font color="#424242">                         </font><span style="color: rgb(66, 66, 66);">页面中给作品评价，该评价会显示到图片展示页面中的用户留言中。</span></span></div>
+<div><br/></div>
+<div><font color="#424242"><br/></font></div>
+<div><font color="#424242"><br/></font></div>
+<div><font color="#424242"><br/></font></div>
+<div><br/></div>
+</body></html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<div class="wrap">
+<include file="public:header" />
+    <div class="content">
+    	<div class="login_signup">
+        	<div class="lsbox">
+            	<div class="lstitle clearfix"><b>创建JOO账号</b><span>已有JOO账号？<a href="{:U('user/login')}">登录</a></span></div>
+                <div class="lscont clearfix">
+                	<div class="login_op">
+                    	<p class="hint">使用以下社交网站账号注册</p>
+                        <div class="ls_t">
+                            <volist name="oauth_list" id="val">
+                                <if condition="$val['code'] eq 'sina'">
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwwb">
+                                <elseif condition="$val['code'] eq 'qq'" />
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwqq">
+                                <else/>
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwdb">
+                                </if>
+                            	<span><b>{$val.name}</b></span></a>
+                            </volist>
+                        </div>
+                    </div>
+                    <div class="loginbox">
+                    	<p class="hint">创建JOO账号</p>
+                        <form id="J_register_form" action="{:U('user/register')}" method="post">
+                        <div class="loginform">
+                        	<p><input type="text" name="email" id="J_email" class="logintext wrong" placeholder="电子邮件" /></p>
+                            <input maxlength="36" type="text" name="username" id="J_username" class="logintext" placeholder="{:L('username')}" /></p>
+                            <p><input type="password" name="password" id="J_password" class="logintext" placeholder="密码" /></p>
+                            <p><input type="password" name="repassword" id="J_repassword" class="logintext" placeholder="确认密码" /></p>
+                            <p class="clearfix">
+                                <input type="text" name="captcha" id="J_captcha" class="logintext yzm" placeholder="验证码" />
+                                <span>
+                                    <img src="{:U('captcha/'.time())}" id="J_captcha_img" class="captcha_img" alt="{:L('captcha')}" data-url="{:U('captcha/js_rand')}">
+                                </span>
+                                <a href="javascript:;" id="J_captcha_change">{:L('change_captcha')}</a>
+                            </p>
+                            <p class="clearfix"><input type="button" type="button" id="register_submit" class="loginbtn" value="注 册" /></p>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<include file="public:footer" />
+<script>
+$(function(){
+    //$.pinphp.user.register_form($('#J_register_form')); //注册验证
+    
+    
+    
+    function Register() {
+        var __this = this;
+
+        this.init = function() {
+            $("#register_submit").bind("click", function() {
+                __this._registerAjax();
+            });
+        }
+
+        this._registerAjax = function() {
+            $.ajax({
+                type: "post",
+                url:  PINER.root + '/?m=user&a=register',
+                data: $("#J_register_form").serialize(),
+                dataType: "json",
+                async: false,
+                error: function() {alert('error')},
+                success: function (dataRes) {
+                    switch (dataRes.status) {
+                        case 1: // 成功
+                            fMessage.show(dataRes.msg, "success");
+                            setTimeout(function() { window.location.href = PINER.root + '/?m=index';}, 1000);
+                            break;
+                        case 0: // 失败
+                            fMessage.show(dataRes.msg, "fail");
+                            break;
+                    }
+                    return false;
+                }
+            });
+
+            return false;
+        }
+
+        __this.init();
+    }
+
+    gRegister = new Register();
+});
+</script>
+<!--div id="J_protocol" class="hide"><pre class="dialog_protocol clr6">{:C('pin_reg_protocol')}</pre></div-->
+</div>
+
+</body>
+</html>

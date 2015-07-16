@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <li><a href="#">市场</a><span></span></li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="upload" style="display:none">
+        	<div class="uploadpic">
+            	<img src="" />
+            	<h1 class="uptext" style="display:">点击<a href="#">这里<input type="file" class="upfile" /></a>从您的电脑里上传一张图片</h1>
+                <h1 class="upbar" style="display:none"><b style="width:50%;"></b><span>50%</span></h1>
+            </div>
+            <div class="upbtnbar">
+            	<div class="up_preview"><img src="temp/uppreview.jpg" /></div>
+                <div class="up_btn">
+                	<input type="button" class="upbtn_del" value="删 除" />
+                    <input type="button" class="upbtn_ok" value="完成上传" />
+                </div>
+            </div>
+        </div>
+        <div class="uploading">
+        	<div class="ulingo" style="width:30%;">
+            	
+            </div>
+            <b>50%</b>
+        </div>
+        <div class="picinfo">
+            <div class="info_t">
+                <div class="info_t_l">
+                	<div class="info_t_lt">
+                    <h3 class="infot">图片标题</h3>
+                    <input type="text" class="pictit_text" placeholder="设置标题" />
+                    </div>
+                    <div class="info_t_lr">
+                    <h3 class="infot">价格</h3>
+                    <input type="text" class="pictit_text prace_text" placeholder="设置价格( >300 )" />	
+                    <b>￥</b>
+                    </div>
+                </div>
+                <div class="info_t_r">
+                    <h3 class="infot">信息完整度</h3>
+                    <p>填写更多的信息可提高图片被发现的几率</p>
+                    <div class="infobar"><b style="width:50%"></b></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="infocont">
+                <div class="picinfo_left">
+                    <h3 class="infot">EXIF信息</h3>
+                    <table class="tabexif">
+                        <tr>
+                            <th>相机</th>
+                            <td><input type="text" class="exiftext" placeholder="填写相机" /></td>
+                        </tr>
+                        <tr>
+                            <th>镜头</th>
+                            <td><input type="text" class="exiftext" placeholder="填写镜头" /></td>
+                        </tr>
+                        <tr>
+                            <th>焦距</th>
+                            <td><input type="text" class="exiftext" placeholder="填写焦距" /></td>
+                        </tr>
+                        <tr>
+                            <th>快门速度</th>
+                            <td><input type="text" class="exiftext" placeholder="填写快门速度" /></td>
+                        </tr>
+                        <tr>
+                            <th>光圈</th>
+                            <td><input type="text" class="exiftext" placeholder="填写光圈" /></td>
+                        </tr>
+                        <tr>
+                            <th>ISO</th>
+                            <td><input type="text" class="exiftext" placeholder="填写ISO" /></td>
+                        </tr>
+                        <tr>
+                            <th>拍摄时间</th>
+                            <td><input type="text" class="exiftext" placeholder="填写拍摄时间" /></td>
+                        </tr>
+                    </table>
+                    <h3 class="infot">照片分类</h3>
+                    <div class="selbox">
+                        <select class="infoselect" style="width:310px;">
+                            <option>未分类</option>
+                        </select>
+                        <span></span>
+                    </div>
+                     <h3 class="infot">图片属于</h3>
+                    <div class="selbox">
+                        <select class="infoselect" style="width:310px;">
+                            <option>公共</option>
+                            <option>私人</option>
+                        </select>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="picinfo_center">
+                    <h3 class="infot">图片描述</h3>
+                    <textarea class="infodec" placeholder="请填写图片描述"></textarea>
+                    <h3 class="infot">许可证</h3>
+                    <div class="selbox">
+                        <select class="infoselect" style="width:397px;">
+                            <option>未分类</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <h3 class="infot">标签</h3>
+                    <input type="text" class="tagtext" placeholder="填写标签以增加图片被发现的几率，多个用”，“分割" />
+                </div>
+                <div class="picinfo_right">
+                    <h3 class="infot">拍摄地点</h3>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

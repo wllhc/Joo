@@ -1,0 +1,48 @@
+            <div class="userbar">
+                <div class="card">
+                    <div class="avatar">
+                        <a href="{:U('space/index', array('uid'=>$user['id']))}" title="{$user.username}"><img src="{:avatar($user['id'], 200)}" alt="{$user.username}" width="100" height="100" /></a>
+                    </div>
+                    <div class="username">
+                        <h2>{$user.username}</h2>
+                        <if condition="$user['id'] eq $visitor['id']">
+                            <a class="buttongray" href="{:U('user/index')}">编辑我的资料</a>
+                        <else/>
+                            <a href="{:U('space/info', array('uid'=>$user['id']))}">{:L('show_more')}...</a>
+                        </if>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="hot_left">
+                        <h1>{$hots.count}</h1>
+                        <p>热度</p>
+                    </div>
+                    <div class="hot_right">
+                        <table>
+                            <tr>
+                                <th>浏览</th>
+                                <td>{$hots.hits}</td>
+                            </tr>
+                            <tr>
+                                <th>喜欢</th>
+                                <td>{$hots.laud}</td>
+                            </tr>
+                            <tr>
+                                <th>收藏</th>
+                                <td>{$hots.likes}</td>
+                            </tr>
+                            <tr>
+                                <th>评论</th>
+                                <td>{$hots.comments}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="card longcard">
+                    <notempty name="album['intro']">
+                    <div class="album_intro">{$user.intro}</div>
+                    </notempty>
+                </div>
+                <div class="clear"></div>
+            </div>
+

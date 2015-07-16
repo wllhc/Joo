@@ -1,0 +1,598 @@
+[ 2013-04-02T09:34:27+08:00 ] ERR: (ThinkException) Unknown database 'pinphp'
+[ 2013-04-02T14:35:29+08:00 ] ERR: (ThinkException) Unknown database 'pinphp'
+[ 2013-04-02T14:42:28+08:00 ] 127.0.0.1 /joo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001802s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.068600s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364884947 [ RunTime:0.011232s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000391s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000095s ]
+INFO: Run load_lang Behavior [ RunTime:-0.099747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.125856s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.022726s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.010541s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,8   [ RunTime:0.000624s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.270088s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014565s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.317758s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.033073s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.320208s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.035519s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.322672s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.038015s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.324919s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.040263s ]
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.053791s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.044052s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.087054s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364884948 ) AND ( `end_time` >= 1364884948 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.006018s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.736450s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.451798s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.737775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020333s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.758173s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.767689s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.774664s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.784200s ]
+INFO: Run content_replace Behavior [ RunTime:-0.787655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043249s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.801518s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007351s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000454s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364884948 ) AND ( `end_time` >= 1364884948 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000453s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.811281s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.526628s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.812397s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.054264s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.816528s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.816612s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.816682s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.816718s ]
+INFO: Run content_replace Behavior [ RunTime:-0.816809s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.015097s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.816939s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.008075s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\11e2f12d84b746b76491e3160c81a5b0.php 第 229 行.
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000460s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364884948 ) AND ( `end_time` >= 1364884948 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000523s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.821450s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.536797s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.822831s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064721s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.828445s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.828530s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.828601s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.828639s ]
+INFO: Run content_replace Behavior [ RunTime:-0.828733s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.027012s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.828870s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.020005s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.828870s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064721s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.886255s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.886457s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.886540s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.886578s ]
+INFO: Run content_replace Behavior [ RunTime:-0.886690s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.084815s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.886871s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.078006s ]
+
+[ 2013-04-02T14:42:49+08:00 ] 127.0.0.1 /joo/index.php?m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.003206s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364884969 [ RunTime:0.001199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000381s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000041s ]
+INFO: Run load_lang Behavior [ RunTime:-0.025909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029046s ]
+SQL: SHOW COLUMNS FROM `pin_user` [ RunTime:0.003382s ]
+SQL: SHOW COLUMNS FROM `pin_user` [ RunTime:0.004523s ]
+SQL: SELECT `id` FROM `pin_user` WHERE ( `username` = 'test' ) AND ( `password` = '0b4e7a0e5fe84ad35fb5f95b9ceeac79' ) LIMIT 1   [ RunTime:0.000503s ]
+SQL: UPDATE `pin_user` SET `last_time`=1364884969,`last_ip`='127.0.0.1' WHERE ( `id` = 23 ) [ RunTime:0.000420s ]
+SQL: SELECT `id`,`username`,`password` FROM `pin_user` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000329s ]
+INFO: [ login_end ] --START--
+SQL: SHOW COLUMNS FROM `pin_user_stat` [ RunTime:0.054149s ]
+SQL: SELECT `num`,`last_time` FROM `pin_user_stat` WHERE ( `uid` = 23 ) AND ( `action` = 'login' ) LIMIT 1   [ RunTime:0.008575s ]
+SQL: UPDATE `pin_user_stat` SET `num`=1,`last_time`=1364884969 WHERE ( `uid` = 23 ) AND ( `action` = 'login' ) [ RunTime:0.000471s ]
+SQL: UPDATE `pin_user` SET `score`=score+10,`score_level`=score_level+10 WHERE ( `id` = 23 ) [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `pin_score_log` [ RunTime:0.018177s ]
+SQL: INSERT INTO `pin_score_log` (`uid`,`uname`,`action`,`score`,`add_time`) VALUES (23,'test','login',10,1364884969) [ RunTime:0.007364s ]
+INFO: Run alter_score Behavior [ RunTime:-0.051492s ]
+INFO: [ login_end ] --END-- [ RunTime:0.133941s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.185698s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002582s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.191134s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002838s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.192541s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004259s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\8685e64dee109747f0140a047a4e4481.php 第 187 行.
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.002730s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.003047s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364884969 ) AND ( `end_time` >= 1364884969 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000893s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.250226s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.061950s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.251098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004305s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.255464s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.255866s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.256257s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.256504s ]
+INFO: Run content_replace Behavior [ RunTime:-0.256932s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002272s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.257813s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001480s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.257813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004305s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.284364s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.284558s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.284638s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.284677s ]
+INFO: Run content_replace Behavior [ RunTime:-0.284786s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.026614s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.284950s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.025658s ]
+
+[ 2013-04-02T14:42:50+08:00 ] 127.0.0.1 /joo/index.php?m=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.003168s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364884970 [ RunTime:0.001600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000394s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000039s ]
+INFO: Run load_lang Behavior [ RunTime:-0.022807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025735s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003111s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.001225s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,8   [ RunTime:0.000730s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.043438s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004081s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.050938s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003403s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.053214s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.005705s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.053863s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.006355s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.054396s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.006888s ]
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.002746s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001548s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.002884s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364884970 ) AND ( `end_time` >= 1364884970 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.001120s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.109820s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.062312s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.110913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004273s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.115250s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.115634s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.116003s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.116261s ]
+INFO: Run content_replace Behavior [ RunTime:-0.116758s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002416s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.117770s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001508s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000463s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364884970 ) AND ( `end_time` >= 1364884970 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000420s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.121608s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.074101s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.122803s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007590s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.126216s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.126299s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.126367s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.126404s ]
+INFO: Run content_replace Behavior [ RunTime:-0.126499s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008538s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.126625s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.007350s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\11e2f12d84b746b76491e3160c81a5b0.php 第 229 行.
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000458s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364884970 ) AND ( `end_time` >= 1364884970 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000551s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.130750s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.083241s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.131326s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016142s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.135877s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.135971s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.136042s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.136078s ]
+INFO: Run content_replace Behavior [ RunTime:-0.136170s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.018198s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.136304s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.017029s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.136304s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016142s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.159064s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.159271s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.159353s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.159391s ]
+INFO: Run content_replace Behavior [ RunTime:-0.159542s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.041383s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.159729s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.040453s ]
+
+[ 2013-04-02T14:42:55+08:00 ] 127.0.0.1 /joo/index.php?m=upload&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.008966s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364884974 [ RunTime:0.000446s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000266s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000044s ]
+INFO: Run load_lang Behavior [ RunTime:-0.029971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034027s ]
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.016949s ]
+SQL: SELECT * FROM `pin_item_cate` WHERE status=1  [ RunTime:0.011965s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.093835s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004476s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.121999s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.023649s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.124429s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.026135s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.124429s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082491s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.180924s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.183025s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.184470s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.185692s ]
+INFO: Run content_replace Behavior [ RunTime:-0.187128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008050s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.189101s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001616s ]
+
+[ 2013-04-02T14:43:11+08:00 ] 127.0.0.1 /joo/index.php?m=space&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.002668s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364884991 [ RunTime:0.001496s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000612s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000041s ]
+INFO: Run load_lang Behavior [ RunTime:-0.019126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029694s ]
+SQL: SHOW COLUMNS FROM `pin_user` [ RunTime:0.007298s ]
+SQL: SELECT * FROM `pin_user` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `pin_album` [ RunTime:0.020801s ]
+SQL: SELECT `id`,`title`,`items`,`cover_cache` FROM `pin_album` WHERE ( `uid` = 23 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 6   [ RunTime:0.001914s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\AppServ\www\joo\app\Lib\Action\home\spaceAction.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003106s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) AND ( `uid` = 23 ) LIMIT 1   [ RunTime:0.001594s ]
+SQL: SELECT `id`,`uid`,`title`,`intro`,`img`,`price`,`likes`,`comments` FROM `pin_item` WHERE ( `status` = 1 ) AND ( `uid` = 23 ) ORDER BY id DESC LIMIT 0,8   [ RunTime:0.001159s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\AppServ\www\joo\app\Lib\Action\frontendAction.class.php 第 115 行.
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.103114s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003146s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.138129s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.031829s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.140634s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.034370s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.141273s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.035010s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.192832s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.086540s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.193547s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.087283s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\80e1412a77db18bfbae5e1a955cda034.php 第 244 行.
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.002636s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.004894s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364884991 ) AND ( `end_time` >= 1364884991 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.003301s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.250640s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.144368s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.251291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007202s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.258639s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.259202s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.259729s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.260062s ]
+INFO: Run content_replace Behavior [ RunTime:-0.260704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003542s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.262312s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000713s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.262312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007202s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.289010s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.289241s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.289350s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.289389s ]
+INFO: Run content_replace Behavior [ RunTime:-0.289496s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.026758s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.289664s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.026643s ]
+
+[ 2013-04-02T14:43:13+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pin_album_item` WHERE ( `album_id` IN () ) 
+[ 2013-04-02T14:44:45+08:00 ] 127.0.0.1 /joo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.002723s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364885085 [ RunTime:0.001345s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000405s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000047s ]
+INFO: Run load_lang Behavior [ RunTime:-0.021741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025508s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003511s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.001360s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,8   [ RunTime:0.000713s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.042445s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003092s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.049778s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004215s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.052064s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.006524s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.054499s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.008951s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.056370s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.010812s ]
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.003193s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.002782s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364885085 ) AND ( `end_time` >= 1364885085 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.001168s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.116669s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.071131s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.117799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004726s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.122586s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.123432s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.124255s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.124983s ]
+INFO: Run content_replace Behavior [ RunTime:-0.125913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004791s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.127457s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001069s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000468s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364885085 ) AND ( `end_time` >= 1364885085 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000469s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.130943s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.085406s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.132047s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009493s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.135606s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.135704s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.135773s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.135810s ]
+INFO: Run content_replace Behavior [ RunTime:-0.135901s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008213s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.136036s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.007513s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\11e2f12d84b746b76491e3160c81a5b0.php 第 229 行.
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000511s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364885085 ) AND ( `end_time` >= 1364885085 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000513s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.140487s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.094950s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.141626s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019100s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.145969s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.146052s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.146121s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.146157s ]
+INFO: Run content_replace Behavior [ RunTime:-0.146249s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.018573s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.146383s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.017859s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.146383s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019100s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.171544s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.172013s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.172126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.172165s ]
+INFO: Run content_replace Behavior [ RunTime:-0.172285s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.044153s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.172496s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.043971s ]
+
+[ 2013-04-02T14:46:00+08:00 ] 127.0.0.1 /joo/index.php?m=index&a=index&sort=new
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.003242s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364885160 [ RunTime:0.003511s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000907s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000039s ]
+INFO: Run load_lang Behavior [ RunTime:-0.026856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029867s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003078s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.001260s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY id DESC LIMIT 0,8   [ RunTime:0.000596s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.050253s ]
+INFO: [ view_template ] --END-- [ RunTime:0.005157s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.061253s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.005809s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.063738s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.008326s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.066496s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.011078s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.068926s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.013507s ]
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.002867s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001558s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.003495s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364885160 ) AND ( `end_time` >= 1364885160 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.001080s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.138221s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.082811s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.139354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004831s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.144248s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.145596s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.146885s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.148086s ]
+INFO: Run content_replace Behavior [ RunTime:-0.149483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007374s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.151710s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002127s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000585s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364885160 ) AND ( `end_time` >= 1364885160 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000466s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.156426s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.101017s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.157594s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.013380s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.162351s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.162439s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.162510s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.162546s ]
+INFO: Run content_replace Behavior [ RunTime:-0.162640s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010707s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.162773s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.008938s ]
+NOTIC: [8] Undefined index:  id C:\AppServ\www\joo\data\runtime\Cache\home\11e2f12d84b746b76491e3160c81a5b0.php 第 229 行.
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 8 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000481s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 8 ) AND ( `start_time` <= 1364885160 ) AND ( `end_time` >= 1364885160 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000988s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.167772s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.112362s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.169283s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.025086s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.175546s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.175633s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.175704s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.175741s ]
+INFO: Run content_replace Behavior [ RunTime:-0.175834s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.023912s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.175972s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.022136s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 14 and defined C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input C:\AppServ\www\joo\app\Lib\ORG\JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in C:\AppServ\www\joo\app\Lib\Pintag\loadTag.class.php on line 15 and defined C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path C:\AppServ\www\joo\app\Lib\ORG\Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.175972s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.025086s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.200570s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.200778s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.200862s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.200900s ]
+INFO: Run content_replace Behavior [ RunTime:-0.201015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.048935s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.201199s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.047362s ]
+

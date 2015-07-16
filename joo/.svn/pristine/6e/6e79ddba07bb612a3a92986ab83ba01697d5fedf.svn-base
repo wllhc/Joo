@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <li class="me">
+                	<a href="#">我</a><span></span>
+                	 <ul class="subnav">
+                    	<li><a href="#">图片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                    </ul>    
+                </li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="indexcont">
+        	<div class="itoppart clearfix">
+            	<div class="scrollpic">
+                	<div class="popic">
+                    	<span><img src="temp/860index.jpg" /></span>
+                    </div>
+                    <div class="popicinfo">
+                    	<a href="#" class="pot">寒土上的牧羊人</a>
+                        <a href="#" class="pos">王宏宇</a>
+                    </div>
+                </div>
+                <div class="photographer">
+                	<div class="card"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="ibottompart">
+            	<div class="cbar clearfix">
+                    <a href="#" class="current">最热</a>
+                    <a href="#">最新</a>
+                    <div class="picsort">
+                	<select class="infoselect">
+                    	<option>风景</option>
+                        <option>人文</option>
+                        <option>纪实</option>
+                        <option>商业</option>
+                        <option>小清新</option>
+                   	</select>
+                	<span></span>
+                </div>
+                </div>
+                
+                <div class="clear"></div>
+            	<div class="piccont clearfix">
+                    <div id="pic" class="clearfix">
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="picitem">
+                            <div class="picbox">
+                                <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                                <p>
+                                    <span>
+                                    	<a href="#" class="pictitle">东北坝上的早晨</a>
+                                        <a href="#" class="picauthor">车停枫林</a>
+                                    </span>
+                                    <b class="grade">99.9</b>
+                                </p>
+                            </div>
+                        </div>
+                   	</div>
+                    <div class="pagebar">
+                    	
+                    </div>
+                    
+            	</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

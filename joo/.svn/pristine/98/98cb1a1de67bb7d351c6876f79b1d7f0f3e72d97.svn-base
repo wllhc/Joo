@@ -1,0 +1,7 @@
+<?php
+
+class uploadAction extends frontendAction {
+    public function index() {
+        $this->display();
+    }
+}

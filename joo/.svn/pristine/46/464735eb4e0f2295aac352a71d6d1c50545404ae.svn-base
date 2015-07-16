@@ -1,0 +1,32 @@
+ALTER TABLE  `pin_item` ADD  `Model` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '型号' AFTER  `img` ,
+ADD  `FocalLength` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '焦距' AFTER  `Model` ,
+ADD  `ShutterSpeedValue` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '快门速度' AFTER  `FocalLength` ,
+ADD  `ApertureValue` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '快门光圈' AFTER  `ShutterSpeedValue` ,
+ADD  `ISOSpeedRatings` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  'ISO感光度' AFTER  `ApertureValue` ,
+ADD  `DateTimeOriginal` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '拍摄时间' AFTER  `ISOSpeedRatings` ;
+
+ALTER TABLE `pin_user` ADD `is_camerist` TINYINT NOT NULL DEFAULT '0' COMMENT '1是0否' AFTER `gender` 
+
+ALTER TABLE `pin_item` ADD `lng` VARCHAR( 50 ) NOT NULL AFTER `DateTimeOriginal` ,
+ADD `lat` VARCHAR( 50 ) NOT NULL AFTER `lng` 
+
+ALTER TABLE  `pin_item` ADD  `is_sell` TINYINT NOT NULL COMMENT  '是否出售' AFTER  `comments`;
+
+ALTER TABLE  `pin_item` ADD  `hash` VARCHAR( 64 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '验证重复文件' AFTER  `img` ,
+ADD  `MimeType` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  'mime类型' AFTER  `hash` ,
+ADD  `extension` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '扩展名' AFTER  `MimeType` ,
+ADD  `Width` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '照片宽度' AFTER  `extension` ,
+ADD  `Height` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT  '照片高度' AFTER  `Width`;
+ALTER TABLE  `pin_item` CHANGE  `is_sell`  `is_sell` TINYINT( 4 ) NOT NULL DEFAULT  '1' COMMENT  '是否出售';
+ALTER TABLE  `pin_album_item` ADD  `is_index` TINYINT NOT NULL COMMENT  '是否为封面' AFTER  `intro`;
+
+CREATE TABLE IF NOT EXISTS `pin_item_laud` (
+  `item_id` int(10) unsigned NOT NULL,
+  `uid` int(10) unsigned NOT NULL,
+  `add_time` int(10) NOT NULL,
+  PRIMARY KEY (`item_id`,`uid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+ALTER TABLE  `pin_item` ADD  `laud` INT NOT NULL COMMENT  '赞' AFTER  `comments`;
+ALTER TABLE  `pin_user` ADD  `laud` INT NOT NULL COMMENT  '被赞数量' AFTER  `likes`;
+ALTER TABLE  `pin_item` ADD  `freedown` INT NOT NULL COMMENT  '下载小样' AFTER  `laud`;

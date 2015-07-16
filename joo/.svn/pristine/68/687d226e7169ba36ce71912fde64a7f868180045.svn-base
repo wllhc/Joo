@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+    <head>
+    <include file="public:head" />
+    <css file="__STATIC__/css/default/space.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <include file="public:header" />
+        
+        <div class="content">
+            <div class="picture">
+                <h1 class="picturetitle clearfix">{$item.title}</h1>
+                <div class="clearfix">
+                    <div class="picture_side">
+                        <div class="thepicture">
+                            <img alt="{$item.title}" class="J_decode_img" data-uri="{:base64_encode(attach(get_thumb($img_list[0]['url'], '_b'), 'item'))}" jqimg="{:attach($img_list[0]['url'], 'item')}">
+                            <!--volist name="img_list" id="img">
+                            <li data-url="{:attach(get_thumb($img['url'], '_b'), 'item')}" <if condition="$i eq 1">class="active"</if>><img alt="{$item.title}" class="J_decode_img" data-uri="{:base64_encode(attach(get_thumb($img['url'], '_s'), 'item'))}"></li>
+                            </volist-->
+                        </div>
+                        <div class="buy_share clearfix">
+                            <div class="btnleft">
+                                <a href="{:U('Pay/pay', array('item'=>$item['id']))}" class="btn_blue buybtn">购买</a>
+                                <a href="{:U('Pay/pay', array('item'=>$item['id']))}" class="btn_blue downbtn">下载</a>
+                            </div>
+                            <div class="shareright"></div>
+                        </div>
+                        <div class="picture_comments">
+                            <div class="comment clearfix">
+                                <div class="comment_avatar">
+                                    <a href="{:U('space/index', array('uid'=>$item['uid']))}" target="_blank"><img alt="{$item.uname}" class="J_card fl r3" src="{:avatar($item['uid'], 48)}" data-uid="{$item.uid}" width="50" height="50" /></a>
+                                </div>
+                                <div class="comment_say">
+                                    <textarea id="J_cmt_content" name="content" class="pub_content" placeholder="{:L('item_cmt_def')}"></textarea>
+                                    <div class="comment_go clearfix">
+                                        <a href="javascript:;" id="J_cmt_submit" class="btn_blue gobtn submit r3 fr">发表评论</a>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="comment_showbox">
+                                <volist name="cmt_list" id="val">
+                                <div class="comment_show clearfix">
+                                    <div class="comment_avatar">
+                                        <a href="{:U('space/index', array('uid'=>$val['uid']))}" target="_blank"><img src="{:avatar($val['uid'], 48)}" class="J_card avt" data-uid="{$val.uid}" /></a>
+                                    </div>
+                                    <div class="comment_body">
+                                        <div class="comment_attrib">
+                                            <a href="{:U('space/index', array('uid'=>$val['uid']))}" class="J_card n" data-uid="{$val.uid}" target="_blank">{$val.uname}</a>
+                                            <span>{$val.add_time|fdate}</span>
+                                        </div>
+                                        <div class="comment_text">{$val.info}</div>
+                                    </div>
+                                </div>
+                                </volist>
+                                <div class="comment_show clearfix">
+                                    <div class="comment_avatar">
+                                        <a href="#"><img src="temp/avatar.jpg" /></a>
+                                    </div>
+                                    <div class="comment_body">
+                                        <div class="comment_attrib"><a href="#">李鹏飞</a><span>3天前</span></div>
+                                        <div class="comment_text">
+                                            发表评论的那啥
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="J_cmt_page" class="page_bar">{$page_bar}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_side">
+                        <div class="rightcard clearfix">
+                            <div class="avatar">
+                                <a href="{:U('space/index', array('uid'=>$item['uid']))}" target="_blank"><img alt="{$item.uname}" class="J_card fl r3" src="{:avatar($item['uid'], 48)}" data-uid="{$item.uid}" width="100" height="100" /></a>
+                            </div>
+                            <div class="card_user">
+                                <a href="{:U('space/index', array('uid'=>$item['uid']))}" class="J_card n uname" data-uid="{$item.uid}" target="_blank">{$item.uname}</a><br>
+                                <a href="#" class="btn_blue followbtn">关 注</a>
+                            </div>
+                        </div>
+
+                        <div class="rightcard cardnum clearfix">
+                            <h1>98.5</h1>
+                            <ul>
+                                <li class="views"><strong>1100</strong><span>浏览</span></li>
+                                <li class="votes"><strong>1550</strong><span>投票</span></li>
+                                <li class="fav"><strong>{$item.likes}</strong><span>喜欢</span></li>
+                            </ul>
+                            <div class="clear"></div>
+                            <div class="historical clearfix">
+                                <h2>99.8</h2>
+                                <div class="highnum">
+                                    最高脉冲<br /><strong>2012 02 05</strong>
+                                </div>
+                            </div>
+                            <div class="divider"> </div>
+                        </div>
+
+                        <div class="rightcard clearfix">
+                            <a href="#" class="button like"><span></span>赞一个</a>
+                            <a href="#" class="button liked" style="display:none"><span></span>已赞过</a>
+                            <a href="#" class="button ifav" style="display:none"><span></span>收藏</a>
+                            <a href="javascript:;" class="J_likeitem like_btn button ifaved" data-id="{$item.id}"><span></span>已收藏</a>
+                        </div>
+
+                        <!--该用户更多照片-->
+                        <div class="more_picture">
+                            <div class="more_picture_box" id="more_picture_box">
+                                <a href="javascript:" onClick="gItem.slide('more_picture', 'left', 50);" class="set_pre" title="上一页"><span></span></a>	
+                                <table class="morep_tab" id="more_picture" style="left:0px;">
+                                    <tr>
+                                        <notempty name="maylike_list">
+                                        <volist name="maylike_list" id="mval">
+                                            <volist name="mval['list']" id="mitem">
+                                                <td><a href="{:U('item/index', array('id'=>$mitem['id']))}"><img class="J_decode_img" data-uri="{:base64_encode(attach(get_thumb($mitem['img'], '_m'), 'item'))}" alt="{$mitem.title}"></a></td>
+                                            </volist>
+                                        </volist>
+                                        </notempty>
+
+                                        
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    </tr>
+                                </table>
+                                <a href="javascript:" onClick="gItem.slide('more_picture', 'right', 50)" class="set_next" title="下一页"><span></span></a>
+                            </div>                        
+                        </div>
+
+                        <!--猜你喜欢-->
+                        <div class="more_picture">
+                            <div class="more_picture_box">
+                                <a href="#" class="set_pre" title="上一页"><span></span></a>	
+                                <table class="morep_tab" style="left:px;">
+                                    <tr>
+                                        <notempty name="maylike_list">
+                                        <volist name="maylike_list" id="mval">
+                                            <volist name="mval['list']" id="mitem">
+                                                <td><a href="{:U('item/index', array('id'=>$mitem['id']))}"><img class="J_decode_img" data-uri="{:base64_encode(attach(get_thumb($mitem['img'], '_m'), 'item'))}" alt="{$mitem.title}"></a></td>
+                                            </volist>
+                                        </volist>
+                                        </notempty>
+
+                                        
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                        <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    </tr>
+                                </table>
+                                <a href="#" class="set_next" title="下一页"><span></span></a>
+                            </div>                        
+                        </div>
+
+                        <div class="rightcard clearfix">
+                            <notempty name="item['tag_list']">
+                                <div class="tags clearfix">
+                                    <volist name="item['tag_list']" id="tag">
+                                        <a href="{:U('book/index', array('tag'=>urlencode($tag)))}" target="_blank">{$tag}</a>
+                                    </volist>
+                                </div>
+                            </notempty>
+                            <div class="pictureinfo">
+                                <table class="pinfo">
+                                    <tr>
+                                        <th class="pcam">相机</th>
+                                        <td>NIKON D7000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="pcl">镜头</th>
+                                        <td>17-40</td>
+                                    </tr>
+                                    <tr>   
+                                        <th class="pfl">焦距</th>
+                                        <td>11mm</td>
+                                    </tr>
+                                    <tr> 
+                                        <th class="pss">快门</th>
+                                        <td>10 sec</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="pape">光圈</th>
+                                        <td>f/2.18</td>
+                                    </tr>
+                                    <tr> 
+                                        <th class="piso">ISO</th>
+                                        <td>6400</td>
+                                    </tr>
+                                    <tr> 
+                                        <th class="ptime">时间</th>
+                                        <td>2012 02 02</td>
+                                    </tr>
+                                    <tr> 
+                                        <th class="pcopy">版权</th>
+                                        <td>李万林</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+<script src="__STATIC__/js/jquery/plugins/jquery.jqzoom.js"></script>
+<script src="__STATIC__/js/jquery/plugins/jquery.jcarousel.js"></script>
+<include file="public:footer" />
+<script src="__STATIC__/js/comment.js"></script>
+<script type="text/javascript">
+function objectItem () {
+    var __this = this;
+
+    /**
+     * 图片滚动器
+     *
+     * @param {String} obj_id 滚动器容器对象
+     * @param {String} to 滚动方向 可选值：left|right
+     * @param {Int} num 滚动距离
+     */
+    this.slide = function (obj_id, to, num) {
+        if ("undefined" == typeof num) {
+            num = 50;
+        }
+
+        var _obj = document.getElementById(obj_id);
+        var _width = _obj.offsetWidth - document.getElementById("more_picture_box").offsetWidth;
+        var _left = parseInt(_obj.style.left.replace("px", ""));
+        if ('right' == to) {
+            _obj.style.left = (Math.abs(_left - num) > _width ? parseInt('-' + _width) : (_left - num) ) + "px";
+        } else {
+            _obj.style.left = ((_left + num) > 0 ? 0 : (_left + num))+ "px";
+        }
+    }
+}
+gItem = new objectItem();
+</script>
+
+</body>
+</html>

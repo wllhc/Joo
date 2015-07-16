@@ -1,0 +1,50 @@
+<include file="public:head" />
+<div class="container">
+    <div style="width:791px;margin: 0px auto;">
+        <!--表单-->
+
+        <div class="admincont">
+                <div class="vip_content">
+                    <div class="vipc_box_info">
+                    <div class="fx_title">
+                        <span class="f16">
+                            <a href="__APP__/Users">账户</a> >> 订单提交
+                        </span>
+                        
+                    </div>
+                    <table class="tab_cont">
+                <tr>
+                    <th style="padding-top:40px"><span class="f16"><font style="margin-left:180px;color:#bf0000; font-size:20px;font-family:yahei,Arial; font-weight:700;text-align:center;">正在生成订单，转向第三方支付页面...</font></span></th>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">
+                            <table class="tab_in">
+                                <tr>
+                                    <th width="240"> </th>
+                                    <th>订单号：</th>
+                                    <td style="padding:0 0 0 10px"><font style="color:#bf0000; font-size:16px;font-family:yahei,Arial; font-weight:100">{$params.out_trade_no}</font> </td>
+                                </tr>
+                                <tr>
+                                    <th width="240"> </th>
+                                    <th width="80">金额：</th>
+                                    <td style="padding:0 0 0 10px"><font style="color:#F00; font-size:22px;font-family:Georgia,Arial; font-weight:700">{$params.total_fee}</font> &nbsp;元 (1元=1金币)</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2">
+                                      
+                                            {$form_html}
+                                    </td>
+                                </tr>
+                            </table>
+
+                    </td>
+                </tr>
+            </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer" />

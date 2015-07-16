@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+    <include file="public:head" />
+    <css file="__STATIC__/css/default/space.css" />
+</head>
+<body>
+    <div class="wrap">
+        <include file="public:header" />
+
+        <div class="content">
+            <include file="space:userbar" />
+            <div class="cbar clearfix">
+                <a href="{:U('space/index', array('uid'=>$user['id']))}">图片</a>
+                <a href="{:U('space/album', array('uid'=>$user['id']))}">专辑</a>
+                <a href="{:U('space/like', array('uid'=>$user['id']))}" class="current">收藏</a>
+                <a href="{:U('space/follow', array('uid'=>$user['id']))}">关注</a>
+                <a href="{:U('space/fans', array('uid'=>$user['id']))}">关注我</a>
+            </div>
+            <div class="piccont clearfix">
+                <div id="fav" class="clearfix" style="display:">
+                    <div class="picitem">
+                        <div class="picbox">
+                            <a href="{:U('item/index',array('id'=>$user['id']))}"><img src="temp/pic_prv.jpg" /></a>
+                            <p>
+                                <a href="{:U('item/index',array('id'=>$user['id']))}" class="pictitle">东北坝上的早晨</a>
+                                <b class="grade">99.9</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="J_waterfall" class="wall_container clearfix" data-uri="__ROOT__/?m=space&a=like_wall&uid={$user.id}&p={$p}">
+                        <include file="public:waterfall" />
+                    </div>
+                    <present name="show_load">
+                        <div id="J_wall_loading" class="wall_loading tc gray"><span>{:L('loading')}</span></div>
+                    </present>
+
+                    <present name="page_bar">
+                        <div id="J_wall_page" class="wall_page" <present name="show_page">style="display:block;"</present>>
+                            <div class="page_bar">{$page_bar}</div>
+                        </div>
+                    </present>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+<include file="public:footer" />
+</body>
+</html>

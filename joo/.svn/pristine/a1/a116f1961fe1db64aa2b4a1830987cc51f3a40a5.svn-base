@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <include file="public:head"/>
+    <css file="__STATIC__/css/default/css2.css"/>
+</head>
+<body>
+<div class="wrap">
+    <include file="public:header"/>
+    <div class="content">
+        <div class="indexcont">
+            <div class="itoppart clearfix">
+                <div class="scrollpic">
+					<div class="popic">
+						<div class="prepic"></div>
+                    	<span><img src="temp/860index.jpg" /></span>
+                        <div class="nextpic"></div>
+                    </div>
+                    <div class="popicinfo">
+                        <a href="#" class="pot">寒土上的牧羊人</a>
+                        <a href="#" class="pos">王宏宇</a>
+                    </div>
+                </div>
+                <div class="photographer">
+                    <div class="card">
+                        <div class="applink">
+                            <div class="fl">{:R('advert/index', array(4), 'Widget')}</div>
+                            <div class="fr">{:R('advert/index', array(5), 'Widget')}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="ibottompart">
+                <div class="cbar clearfix">
+                    <if condition="$cur_sort eq 'hot'">
+                        <a href="{:U('index/index', array('sort'=>'hot'))}" class="current">最热</a>
+                        <a href="{:U('index/index', array('sort'=>'new'))}">最新</a>
+                        <else/>
+                        <a href="{:U('index/index', array('sort'=>'hot'))}">最热</a>
+                        <!--a href="javascript:" onClick="gIndex.find('new');">最新</a-->
+                        <a href="{:U('index/index', array('sort'=>'new'))}" class="current">最新</a>
+                    </if>
+                    <div class="picsort">
+                        <select class="infoselect" onChange="gIndex.jumpToTag(this);">
+                            <volist name="hot_tags" id="tag">
+                                <option value="{:U('book/index',array('tag'=>$tag))}">{$tag}</option>
+                            </volist>
+                        </select>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <if condition="C('pin_index_wall')">
+                    <div class="piccont clearfix">
+                        <div id="J_waterfall" class="clearfix" data-uri="__ROOT__/?m=book&a=index_ajax&sort=hot">
+                            <include file="public:waterfall"/>
+                        </div>
+                        <present name="show_load">
+                            <div id="J_wall_loading" class="wall_loading tc gray"><span>{:L('loading')}</span></div>
+                        </present>
+
+                        <present name="page_bar">
+                            <div id="J_wall_page" class="wall_page">
+                                <div class="page_bar">{$page_bar}</div>
+                            </div>
+                        </present>
+                    </div>
+                </if>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<include file="public:footer"/>
+<script>
+    $(function () {
+        $('#J_focus').tabs('#J_focus_img > li', {rotate: true}).slideshow({autoplay: true});
+    });
+    function objectIndex() {
+        this.find = function (type) {
+            $.ajax({
+                type: "post",
+                url: "__ROOT__/?m=index&a=find",
+                data: "type=" + type,
+                dataType: "json",
+                success: function (dataRes) {
+                    if (0 == dataRes.res) {
+                        var _html = [];
+                        var _item_list = dataRes.item_list;
+                        for (var _item in _item_list) {
+                            _html.push('<div class="picitem">');
+                            _html.push('<div class="picbox">');
+                            _html.push('<a href="{:U(\'item/index\', array(\'id\'=>' + _item_list[_item].id + '))}" title="' + _item_list[_item].title + '" target="_blank"><img alt="' + _item_list[_item].title + '" class="J_img J_decode_img" data-uri="{:base64_encode(attach(get_thumb(' + _item_list[_item].img + ', \'_m\'), \'item\'))}" width="280" height="280" /></a>');
+                            _html.push('<p>');
+                            _html.push('<a href="{:U(\'item/index\', array(\'id\'=>' + _item_list[_item].id + '))}" class="pictitle">' + _item_list[_item].intro + '</a>');
+                            _html.push('<b class="grade">' + _item_list[_item].price + '</b>');
+                            _html.push('</p>');
+                            _html.push('</div>');
+                            _html.push('</div>');
+                        }
+                        document.getElementById("J_waterfall").innerHTML = _html.join("");
+                    }
+                }
+            });
+        }
+
+        this.jumpToTag = function(obj) {
+            window.location.href = obj.value;
+            //alert(obj.value);
+        }
+    }
+
+    gIndex = new objectIndex();
+</script>
+
+</body>
+</html>

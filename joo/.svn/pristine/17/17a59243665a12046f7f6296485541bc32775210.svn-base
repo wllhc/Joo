@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <li class="me"><a href="#">我</a><span></span></li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="userbar">
+            <div class="card">
+                <div class="avatar">
+                    <img src="temp/avatar.jpg" />
+                </div>
+                <div class="username">
+                    <h2>王宏宇</h2>
+                    <a href="#">编辑我的资料</a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="hot_left">
+                	<h1>258041</h1>
+                    <p>热度</p>
+                </div>
+                <div class="hot_right">
+                	<table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>125841</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card longcard"></div>
+            <div class="clear"></div>
+         </div>
+        <div class="cbar clearfix">
+        	<a href="#" class="current">图片</a>
+            <a href="#">专辑</a>
+            <a href="#">收藏</a>
+            <a href="#">关注</a>
+            <a href="#">关注我</a>
+        </div>
+        <div class="piccont clearfix">
+        	<div id="pic" class="clearfix" style="display:">
+                <div class="picitem">
+                    <div class="picbox">
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="zhuaji" style="display:">
+            	<div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+                <div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="follow" style="display:">
+            	<div class="follow">
+                	<div class="followcard">
+                    	<div class="follow_avatar">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                        <div class="follow_info">
+                        	<h2><a href="#">李鹏飞</a></h2>
+                            <p><a href="#">取消关注</a></p>
+                        </div>
+                        <div class="follow_stats">
+                        	<table>
+                                <tr>
+                                    <th>浏览</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>喜欢</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>收藏</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>评论</th>
+                                    <td>125841</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="follow_photo">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                    </div>
+                    <div class="followcard">
+                    	<div class="follow_avatar">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                        <div class="follow_info">
+                        	<h2><a href="#">李鹏飞</a></h2>
+                            <p><a href="#">取消关注</a></p>
+                        </div>
+                        <div class="follow_stats">
+                        	<table>
+                                <tr>
+                                    <th>浏览</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>喜欢</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>收藏</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>评论</th>
+                                    <td>125841</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="follow_photo">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                    </div>
+                    <div class="followcard">
+                    	<div class="follow_avatar">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                        <div class="follow_info">
+                        	<h2><a href="#">李鹏飞</a></h2>
+                            <p><a href="#">取消关注</a></p>
+                        </div>
+                        <div class="follow_stats">
+                        	<table>
+                                <tr>
+                                    <th>浏览</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>喜欢</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>收藏</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>评论</th>
+                                    <td>125841</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="follow_photo">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                    </div>
+                    <div class="followcard">
+                    	<div class="follow_avatar">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                        <div class="follow_info">
+                        	<h2><a href="#">李鹏飞</a></h2>
+                            <p><a href="#">取消关注</a></p>
+                        </div>
+                        <div class="follow_stats">
+                        	<table>
+                                <tr>
+                                    <th>浏览</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>喜欢</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>收藏</th>
+                                    <td>125841</td>
+                                </tr>
+                                <tr>
+                                    <th>评论</th>
+                                    <td>125841</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="follow_photo">
+                        	<a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                            <a href="#"><img src="temp/avatar.jpg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

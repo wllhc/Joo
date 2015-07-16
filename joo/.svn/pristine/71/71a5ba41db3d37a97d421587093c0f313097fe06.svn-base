@@ -1,0 +1,17 @@
+<div class="set_sidebar">
+    <dl>
+        <volist name="user_menu_list" id="menu">
+            <dt class="{$key}"><a href="#">{$menu.text}</a></dt>
+            <volist name="menu['submenu']" id="smenu">
+                <dd><a href="{$smenu.url}" <if condition="$user_menu_curr eq $key">class="c"</if>>{$smenu.text}</a></dd>
+            </volist>
+        </volist>
+        <dt><a href="#">认证信息</a></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dt><a href="#">账户信息</a></dt>
+
+    </dl>
+</div>

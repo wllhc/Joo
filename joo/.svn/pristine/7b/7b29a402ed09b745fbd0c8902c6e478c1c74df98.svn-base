@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<!--身份证认-->
+<div class="lightbox" style="display:;">
+    <div class="lbbox">
+        <b class="closelightbox"></b>
+        <h2>身份证认证</h2>
+        <div class="upavatar clearfix">
+            <p class="upvb">请填写您的真实姓名与身份证号</p>
+            <div class="uptx">
+            	<input type="text" placeholder="请输入真实姓名" class="crtext cts" />
+            </div>
+            <div class="uptx">
+            	<input type="text" placeholder="请输入身份证号" class="crtext cts" />
+            </div>
+            <p class="upvb">请上传您的身份证照片和一张生活照片</p>
+            <div class="uptx clearfix"><a href="#" class="upabtn" id="upsfz"  onclick="document.getElementById('upsfz').click()" >上传身份证<input type="file" onchange="document.getElementById('upsfzr').innerHTML=this.value" /></a><span id="upsfzr"></span></div>
+            <div class="uptx clearfix"><a href="#" class="upabtn" id="upshz"  onclick="document.getElementById('upshz').click()" >上传生活照<input type="file" onchange="document.getElementById('upshzr').innerHTML=this.value"/></a><span id="upshzr"></span></div>
+            
+            <!--div class="upcont">
+                <div class="upbg">
+                    <a href="#" class="upabtn">从电脑选取图片<input type="file" /></a>
+                </div>
+            </div>
+            <div class="upshow">
+                <div class="avatarshowb"><img src="temp/avatar.jpg" /></div>
+                <div class="avatarshows"><img src="temp/avatar.jpg" /></div>
+            </div-->
+            
+            <div class="upaok"><a href="#" class="button like">OK,设置完成</a></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <!--li class="me">
+                	<a href="#">我</a><span></span>
+                	 <ul class="subnav">
+                    	<li><a href="#">图片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                    </ul>    
+                </li-->
+            </ul>
+            
+            <ul class="nav rightnav">
+            	<li>
+                    <a href="#" class="topaddbtn">添加</a>
+                    <ul class="subnav">
+                        <li><a href="#">新照片</a></li>
+                        <li><a href="#">新专辑</a></li>
+                        <li><a href="#">新关注</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#" class="topusrbtn clearfix"><b><img src="temp/avatar.jpg" /></b><span>心尘代谢</span></a>
+                    <ul class="subnav">
+                        <li><a href="#">照片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                        <li class="navline"></li>
+                        <li><a href="#">设置</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="settings clearfix">
+        	<div class="set_sidebar">
+            	<dl>
+                	<dt><a href="#">账号设置</a></dt>
+                    <dd><a href="#">基本资料</a></dd>
+                    <dd><a href="#">修改密码</a></dd>
+                    <dd><a href="#">社交绑定</a></dd>
+                    <dd><a href="#" class="rzpher sidecurrent">成为摄影师</a></dd>
+                    <dt><a href="#">账户信息</a></dt>
+                    <dd><a href="#">我的订单</a></dd>
+                </dl>
+            </div>
+            <div class="set_content">
+            	<div>
+                	<div class="settitle clearfix"><h3>成为摄影师</h3><span></span></div>
+                    <div class="arrwhite"></div>
+                    <div class="cardcontent">
+                   		<div class="rzc">
+                        	<!--h5>确认您登录的是焦距网http://www.joo.com.cn注意防范进入钓鱼网站，不要轻信各种即时通讯工具发送的商品或支付链接，谨防网购诈骗。</h5-->
+                            <div class="rzct">
+                            	<div class="whyyz">
+                                	<h4>怎么才能成为JOO的摄影师</h4>
+                                    <p>1.用于提升账号的安全性和信任级别。</p>
+                                    <p>2.不同于登录邮箱。当您选择“安全保护问题”找回您的安全邮箱。</p>
+                                    <p>3.用于提升账号的安全性和信任级别。</p>
+                                </div>
+                            </div>
+                            <div class="rzcc">
+                                <table class="rzctab">
+                                    <tr>
+                                        <tr>
+                                            <td width="150">
+                                                <div class="yzbox yzno">
+                                                    身份验证
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="yzz"><p>用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</p></div>
+                                            </td>
+                                            <td width="100" align="right"><a href="#" class="btn_red">认证</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="yzbox yzyes">邮件认证</div></td>
+                                            <td>
+                                                <div class="yzz">
+                                                    <span>您的认证邮箱：<b>j****s@gmail.com</b></span>
+                                                    <p>不同于登录邮箱。当您选择“安全保护问题”找回密码时，填写正确的问题答案后，我们会将新密码发到您的安全邮箱。</p>
+                                                </div>
+                                            </td>
+                                            <td align="right"><a href="#" class="btn_blue">修改</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="yzbox yzyes">手机验证</div></td>
+                                            <td>
+                                                <div class="yzz">
+                                                    <span>您的认证手机：<b>13358****52</b></span>
+                                                    <p>不同于登录邮箱。当您选择“安全保护问题”找回密码时，填写正确的问题答案后，我们会将新密码发到您的安全邮箱。</p>
+                                                </div>
+                                            </td>
+                                            <td align="right"><a href="#" class="btn_blue">修改</a></td>
+                                        </tr>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

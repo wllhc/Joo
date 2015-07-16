@@ -1,0 +1,40 @@
+[ 2013-04-12T09:58:08+08:00 ] 127.0.0.1 /joo/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000513s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.010871s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1365731888 [ RunTime:0.000564s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000329s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000039s ]
+INFO: Run load_lang Behavior [ RunTime:-0.023948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027599s ]
+NOTIC: [8] Undefined index:  admin C:\AppServ\www\joo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.040994s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.109647s ]
+INFO: [ view_template ] --END-- [ RunTime:0.047244s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.156972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.164744s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.321818s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.332433s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.339439s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.348921s ]
+INFO: Run content_replace Behavior [ RunTime:-0.352469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.044286s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.366275s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015598s ]
+
+[ 2013-04-12T09:58:09+08:00 ] 127.0.0.1 /joo/index.php?g=admin&m=index&a=verify_code&t=1365731888
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.040078s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1365731888 [ RunTime:0.003387s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000304s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000046s ]
+INFO: Run load_lang Behavior [ RunTime:-0.066836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071778s ]
+NOTIC: [8] Undefined index:  admin C:\AppServ\www\joo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.011202s ]
+

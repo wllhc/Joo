@@ -1,0 +1,15 @@
+/**
+ * JS全局函数
+ *
+ * @param id
+ * @returns {HTMLElement}
+ */
+
+/**
+ *
+ * @param id
+ * @returns {HTMLElement}
+ */
+function g(id) {
+    return document.getElementById(id);
+}

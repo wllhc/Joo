@@ -1,0 +1,8 @@
+<meta charset="utf-8" />
+<title>{$page_seo.title} - JOO</title>
+<meta name="keywords" content="{$page_seo.keywords}" />
+<meta name="description" content="{$page_seo.description}" />
+<css file="__STATIC__/css/default/base.css" />
+<css file="__STATIC__/css/default/style.css" />
+<css file="__STATIC__/css/default/content.css" />
+<script src="__STATIC__/js/jquery/jquery.js"></script>

@@ -1,0 +1,45 @@
+<div class="lightbox">
+<div class="lbbox clearfix">
+	<b class="closelightbox"></b>
+    <h2 class="lstitle clearfix"><b>登录到JOO</b><span style="font-weight:400">还没有JOO账号？<a href="{:U('user/register')}">创建</a>一个</span></h2>
+    <form id="J_dlogin_form" action="{:U('user/login')}" method="post">
+    <!--p id="J_login_fail" class="login_fail">{:L('username_require')}</p-->
+    <div class="login_form">
+    	<div class="login_op" style="border-right:none">
+            <p class="hint">使用以下社交网站账号登录</p>
+            <div class="ls_t">
+                <a href="#" class="lwwb">
+                    <span><b>新浪微博账号登录</b></span>
+                </a>
+                <a href="#" class="lwqq">
+                    <span><b>腾讯微博账号登录</b></span>
+                </a>
+                <a href="#" class="lwdb">
+                    <span><b>豆瓣账号登录</b></span>
+                </a>
+            </div>
+        </div>
+    	<div class="loginbox" style="border-left:none">
+       		<p class="hint">使用JOO账号登录</p>
+            <div class="loginform">
+            	<p><input type="text" class="logintext" name="username"></p>
+                <p><input type="password" class="logintext" name="password"></p>
+                <!--dt><label><input type="checkbox" checked="" class="checkbox" name="remember">{:L('rememberme')}</label></dt-->
+                <p class="clearfix">
+               		<a href="{:U('findpwd/index')}">{:L('forget_password')}</a>
+                    <input type="submit" class="loginbtn" value="{:L('login')}"> 
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div class="reg_or_oauth">
+        <span>{:L('other_login_model')}：</span>
+        <ul class="oauth_list mb20">
+            <volist name="oauth_list" id="val">
+            <li><a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="o_icon"><img src="__STATIC__/images/oauth/{$val.code}/icon.png" />{$val.name}</a></li>
+            </volist>
+        </ul>
+    </div>
+</div>
+</div>

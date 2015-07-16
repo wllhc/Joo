@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支付</title>
+<style>
+*{ margin:0; padding:0}
+body{ font:12px normal 'microsoft yahei', Verdana, Geneva, sans-serif;background:#f5f5f5 url(images/background.jpg) top center no-repeat}
+.clearfix:after {clear: both;content: " ";display: block;font-size: 0;height: 0;visibility: hidden;}	
+.head{ width:800px; margin:0 auto; padding-top:20px;}	
+.logo{ text-align:center;float:left;}
+h1{ font-size:18px; color:#333; font-weight:400; color:#090}
+h1 span{ font-weight:700; text-decoration:none;}
+.paycard{ overflow:hidden; background:#fff; width:800px; border-radius:5px;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); margin:20px auto}
+a{ color:#0099e5;}
+.ct{ background:url(images/carbg.png) left bottom no-repeat; padding:35px 40px 5px 110px;}
+.ct p{ font-size:12px; color:#666; padding-top:10px;}
+.ct span{ padding:0 15px;}
+.ct p b{ color:#f00;}
+p.cx{  font-weight:700; padding:40px 0; color:#333; font-size:14px}
+p.cx span{ font-weight:400; padding:0; color:#666}
+p.cx span strong{ color:orange; font-weight:400}
+.box{ border-top:2px solid #eb6307;padding:20px 40px 30px; background:#fff//dee}
+.cp{ margin-top:30px;}
+.tab{ overflow:hidden; padding:0 40px;}
+.tab a{ display:block; background:#f1f1f1; float:left; height:30px; line-height:30px; font-size:14px; font-weight:700; color:#333; padding:0 20px; margin-right:8px; text-decoration:none; border-radius:3px 3px 0 0}
+.tab a:hover{}
+.tab a.current{ background:#eb6307; color:#fff;}
+.pb{ vertical-align:middle; overflow:hidden}
+.pb p input{ vertical-align:middle; position:relative; top:-15px;}
+.pb p{ float:left; overflow:hidden; margin:20px 0}
+.pb p span{ display:inline-block; background:#fff; padding:5px 0; width:150px; text-align:center; border:1px solid #eee; margin-left:10px}
+.box h3{ font-weight:400; color:#666; font-size:12px;}
+.box h3 span{ font-weight:700; color:#000}
+.pg{ padding:15px 0}
+.pbn{ display:block; float:left; height:32px; line-height:32px; padding:0 25px; background:#f07b00 url(images/button.png) repeat-x; border-radius:3px; border:1px solid #eb6307; color:#fff; font-size:14px; text-decoration:none; font-weight:700;-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);}
+.pbn:hover{ background-color:#e45600}
+</style>
+</head>
+
+<body>
+<div class="paydiv">
+<div class="head clearfix">
+	<div class="logo"><img src="images/joo_logo.png" /></div>	
+</div>
+<div class="paycard">
+	<div class="ct">
+        <h1>王宏宇您好，订单已经生成,请您尽快付款</h1>
+        <p>订单号：ACE2013021500552<span>|</span>应付金额(元)：<b>198.00</b></p>
+        <p class="cx">立即支付<b>189.00元</b>，即可完成订单。<span>请您在<strong>24小时</strong>内完成支付，否则订单会被自动取消。</span></p>
+    </div>
+    <div class="cp">
+    	<div class="tab">
+        	<a href="#" class="current">平台支付</a>
+            <a href="#">网银支付</a>
+        </div>
+        <div class="box">
+        	<h3>支付方式：<span>平台支付</span></h3>
+            <div class="pb">
+            	<p><input type="radio" checked="checked" /> <span><img src="images/alipay.png" /></span></p>
+            </div>
+            <div class="pg clearfix">
+            	<a href="#" class="pbn">确认，付款</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <!--li class="me">
+                	<a href="#">我</a><span></span>
+                	 <ul class="subnav">
+                    	<li><a href="#">图片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                    </ul>    
+                </li-->
+            </ul>
+            
+            <ul class="nav rightnav">
+            	<li>
+                    <a href="#" class="topaddbtn">添加</a>
+                    <ul class="subnav">
+                        <li><a href="#">新照片</a></li>
+                        <li><a href="#">新专辑</a></li>
+                        <li><a href="#">新关注</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#" class="topusrbtn clearfix"><b><img src="temp/avatar.jpg" /></b><span>心尘代谢</span></a>
+                    <ul class="subnav">
+                        <li><a href="#">照片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                        <li class="navline"></li>
+                        <li><a href="#">设置</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="settings clearfix">
+        	<div class="set_sidebar">
+            	<dl>
+                	<dt><a href="#">账号设置</a></dt>
+                    <dd><a href="#">基本资料</a></dd>
+                    <dd><a href="#">修改密码</a></dd>
+                    <dd><a href="#">社交绑定</a></dd>
+                    <dd><a href="#" class="rzpher">认证成为摄影师</a></dd>
+                    <dt><a href="#">账户信息</a></dt>
+                    <dd><a href="#">我的订单</a></dd>
+                    <dd><a href="#">消费记录</a></dd>
+                    <dd><a href="#" class="sidecurrent">收入记录</a></dd>
+                </dl>
+            </div>
+            <div class="set_content">
+            	<div>
+                	<div class="settitle clearfix"><h3>收入记录</h3><span></span></div>
+                    <div class="arrwhite"></div>
+                    <div class="cardcontent">
+                   		<div class="rzct">
+                            <div class="whyyz whyyzx">
+                                <h4>账户余额：<span>￥862.00</span></h4>
+                                <h5>近一年实际收入额:<span>￥6,862.00</span></h5>
+                                <div class="tx"><a href="#" class="btn_orange">提 现</a></div>
+                            </div>
+                        </div>
+                    	<div class="carttitle">
+                            <table class="carttab">
+                                <tr>
+                                    <td width="170">时间</td>
+                                    <td width="170">订单号</td>
+                                    <td>收入额增加</td>
+                                    <td width="300">备注</td>
+                                </tr>
+                            </table>
+                        </div>
+                         <div class="cartcont">
+                        	<table class="carttab">
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                                <tr>
+                                    <td width="170">2013-03-16 08:08:48</td>
+                                    <td width="170"><a href="#">2584102233</a></td>
+                                    <td><span>￥350.00</span></td>
+                                    <td width="300"><span>订单494300943完成，增加消费额</span></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

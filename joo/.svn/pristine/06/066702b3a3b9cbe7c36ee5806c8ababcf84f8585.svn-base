@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<include file="public:head" />
+<css file="__STATIC__/css/default/album.css" />
+</head>
+<body>
+<include file="public:header" />
+<div class="content">
+    	<div class="userbar">
+            <div class="card">
+                <div class="avatar">
+                    <a href="{:U('space/index', array('uid'=>$album['uid']))}" target="_blank"><img src="{:avatar($album['uid'], '48')}" class="J_card fl r3" data-uid="{$album.uid}" alt="{$album.uname}" width="100" height="100" /></a>
+                </div>
+                <div class="username">
+                    <h2>{$album.uname}</h2>
+                    <if condition="$album['uid'] neq $visitor['id']">
+                    <div class="J_follow_bar" data-uid="{$album.uid}">
+                        <if condition="$author_ship eq 0">
+                        <a href="javascript:;" class="J_fo_u fo_u_btn">{:L('follow')}</a>
+                        <elseif condition="$author_ship eq 1"/>
+                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_ok">{:L('followed')} | </span>{:L('cancel')}</a>
+                        <elseif condition="$author_ship eq 2"/>
+                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_all">{:L('follow_mutually')} | </span>{:L('cancel')}</a>
+                        </if>
+                    </div>
+                    <else/>
+                    <a href="#">编辑我的资料</a>
+                    </if>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="hot_left">
+                    <h1>{$album['items']+$album['likes']+$album['follows']}</h1>
+                    <p>热度</p>
+                </div>
+                <div class="hot_right">
+                	<table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>{$album.likes}</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>125841</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card longcard">
+                <notempty name="album['intro']">
+                <div class="album_intro">{$album.intro}</div>
+                </notempty>
+            </div>
+            <div class="clear"></div>
+         </div>
+        <div class="piccont clearfix">
+        	
+            
+            <!--div id="zhuaji" style="display:">
+            	<div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+                <div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+            </div-->
+            
+            <div id="pic" class="clearfix" style="display:">
+            	<div class="albumbar clearfix">
+                    <div class="album_cover r3" <notempty name="album['banner']">style="background:url({:attach($album['banner'], 'album')});"</notempty>>
+                        <div class="album_title_info rr5"><h1 class="album_title fl">{$album.title}</h1></div>
+                    </div>
+                    <!--div class="albumopt">
+                    	<a href="#" class="album_newpic btnblue">添加照片</a>
+                        <span class="album_set">
+                        	操作
+                            <div class="asdrop">
+                            	<a href="#">批量删除</a>
+                                <a href="#">编辑相册</a>
+                                <a href="#">删除相册</a>
+                            </div>
+                        </span>
+                    </div-->
+                </div>
+                <if condition="$album['uid'] eq $visitor['id']">
+                <div class="abset clearfix">
+                	<span class="picchick">
+                    	<input type="checkbox" /> 全选
+                    </span>
+                    <span class="sbtn">
+                    	<b class="nosell">下架</b>
+                    </span>
+                    <span class="sbtn">
+                    	<b class="del">删除</b>
+                    </span>
+                    <span class="sbtn upmenu">
+                    	<b class="J_shareitem_btn fl add_album_content_btn up" data-aid="{$album.id}">上传照片</b>
+                    </span>
+                </div>
+                </if>
+                
+                <!--div class="card maxcard"></div-->
+                <include file="public:waterfall_album_detail" />
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<include file="public:footer" />
+<script src="__STATIC__/js/albumcmt.js"></script>
+</body>
+</html>
+
+

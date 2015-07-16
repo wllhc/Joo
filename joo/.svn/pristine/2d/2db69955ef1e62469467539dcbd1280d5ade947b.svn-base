@@ -1,0 +1,44 @@
+<!-- unity footer -->
+<div class="clear"></div>
+<div id="footercontainer">
+	<div id="footer">
+        &copy;Copyright 2010-2012 <a href="__ROOT__/" class="tdu clr6" target="_blank">{:C('pin_site_name')}</a> (<a href="http://www.miibeian.gov.cn" class="tdu clr6" target="_blank">{:C('pin_site_icp')}</a>){:C('pin_statistics_code')}
+        <ul class="navi">
+            <!--导航-->
+            <volist name="data" id="val">
+      		<li><a href="{$val.link}" <if condition="$val.target eq 1">target="_blank"</if>>{$val.name}</a></li>
+            </volist>
+            <!--关于-->
+            <volist name="data" id="val">
+      		<li><a href="{:U('aboutus/index', array('id'=>$val['id']))}" target="_blank">{$val.name}</a></li>
+            </volist>
+            <!--友情链接-->
+            <li><a href="{:U('aboutus/flink')}" target="_blank">{:L('flink')}</a></li>
+        </ul>
+        <div class="clear"></div>
+        <ul class="navi">
+            {:R('advert/index', array(8), 'Widget')}
+        </ul>
+		<div class="clear"></div>
+	</div>
+</div>
+<!-- end unity footer -->
+<div id="J_returntop" class="return_top"></div>
+
+<script>
+var PINER = {
+    root: "__ROOT__",
+    uid: "<?php echo $visitor['id'];?>", 
+    async_sendmail: "<?php echo $async_sendmail;?>",
+    config: {
+        wall_distance: "<?php echo C('pin_wall_distance');?>",
+        wall_spage_max: "<?php echo C('pin_wall_spage_max');?>"
+    },
+    //URL
+    url: {}
+};
+//语言项目
+var lang = {};
+<volist name=":L('js_lang')" id="val">lang.{$key} = "{$val}";</volist>
+</script>
+<pin:load type="js" href="__STATIC__/js/jquery/plugins/jquery.tools.min.js,__STATIC__/js/jquery/plugins/jquery.masonry.js,__STATIC__/js/jquery/plugins/formvalidator.js,__STATIC__/js/fileuploader.js,__STATIC__/js/pinphp.js,__STATIC__/js/front.js,__STATIC__/js/dialog.js,__STATIC__/js/wall.js,__STATIC__/js/item.js,__STATIC__/js/user.js,__STATIC__/js/album.js" />

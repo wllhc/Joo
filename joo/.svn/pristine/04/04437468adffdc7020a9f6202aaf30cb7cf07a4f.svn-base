@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <head>
+    <include file="public:head" />
+    <css file="__STATIC__/css/default/space.css" />
+</head>
+<body>
+    <div class="wrap">
+        <include file="public:header" />
+
+        <div class="content">
+            <include file="space:userbar" />
+            <div class="cbar clearfix">
+                <a href="{:U('space/index', array('uid'=>$user['id']))}">图片</a>
+                <a href="{:U('space/album', array('uid'=>$user['id']))}">专辑</a>
+                <a href="{:U('space/like', array('uid'=>$user['id']))}">收藏</a>
+                <a href="{:U('space/follow', array('uid'=>$user['id']))}" class="current">关注</a>
+                <a href="{:U('space/fans', array('uid'=>$user['id']))}">关注我</a>
+            </div>
+            <div class="piccont clearfix">
+
+                <div id="follow" style="display:">
+                    <div class="follow">
+                        <volist name="user_list" id="val">
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="{:U('space/index', array('uid'=>$val['id']))}"><img class="J_card fl r5" src="{:avatar($val['id'], 48)}" data-uid="{$val.id}" width="100" height="100" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="{:U('space/index', array('uid'=>$val['id']))}">{$val.username}</a></h2>
+                                <p>
+                                <if condition="$visitor['id'] eq $user['id']">
+                                    <!--自己访问-->
+                                    <if condition="$val['mutually'] eq 0">
+                                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_ok">{:L('followed')} | </span>{:L('cancel')}</a>
+                                    <else/>
+                                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_all">{:L('follow_mutually')} | </span>{:L('cancel')}</a>
+                                    </if>
+                                <else/>
+                                    <!--查看别人-->
+                                    <a href="javascript:;" class="J_fo_u fo_u_btn">{:L('follow')}</a>
+                                </if>
+                                </p>
+
+                                <!--p><a href="#">取消关注</a></p-->
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                        </volist>
+
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="#">李鹏飞</a></h2>
+                                <p><a href="#">取消关注</a></p>
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="#">李鹏飞</a></h2>
+                                <p><a href="#">取消关注</a></p>
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="#">李鹏飞</a></h2>
+                                <p><a href="#">取消关注</a></p>
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="#">李鹏飞</a></h2>
+                                <p><a href="#">取消关注</a></p>
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+<include file="public:footer" />
+</body>
+</html>

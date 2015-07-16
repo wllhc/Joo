@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <li class="me"><a href="#">我</a><span></span></li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+		<div class="picture">
+        	<h1 class="picturetitle clearfix">马栏山坡姐的西藏之旅——藏族儿童</h1>
+            <div class="clearfix">
+            	<div class="picture_side">
+                    <div class="thepicture">
+                        <a href="#"><img src="temp/900.jpg" /></a>
+                        <b class="price">800.00</b>
+                    </div>
+                    <div class="buy_share clearfix">
+                   	  <div class="btnleft">
+                            <a href="#" class="btn_blue buybtn">购买</a>
+                            <a href="#" class="btn_blue downbtn">下载</a>
+                        </div>
+                        <div class="shareright">
+                        	<a href="#" class="wbshare" title="分享到新浪微博"></a>
+                            <a href="#" class="qqshare" title="分享到腾讯微博"></a>
+                            <a href="#" class="dbshare" title="分享到豆瓣"></a>
+                        </div>
+                    </div>
+                	<div class="picture_comments">
+                        <div class="comment clearfix">
+                            <div class="comment_avatar">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                            <div class="comment_say">
+                            	<textarea placeholder="请输入您的评论"></textarea>
+                                <div class="comment_go clearfix">
+                                	<a href="#" class="btn_blue gobtn">发表评论</a>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="comment_showbox">
+                            <div class="comment_show clearfix">
+                                <div class="comment_avatar">
+                                    <a href="#"><img src="temp/avatar.jpg" /></a>
+                                </div>
+                                <div class="comment_body">
+									<div class="comment_attrib"><a href="#">李鹏飞</a><span>3天前</span></div>
+                                    <div class="comment_text">
+                                    发表评论的那啥
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="comment_show clearfix">
+                                <div class="comment_avatar">
+                                    <a href="#"><img src="temp/avatar.jpg" /></a>
+                                </div>
+                                <div class="comment_body">
+									<div class="comment_attrib"><a href="#">李鹏飞</a><span>3天前</span></div>
+                                    <div class="comment_text">
+                                    发表评论的那啥
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_side">
+                	<div class="rightcard clearfix">
+                    	<div class="avatar"><a href="#"><img src="temp/avatar.jpg" /></a></div>
+                        <div class="card_user">
+                            <a href="#" class="uname">jim rose</a>
+                            <a href="#" class="btn_blue followbtn">关 注</a>
+                        </div>
+                    </div>
+                    
+                    <div class="rightcard cardnum clearfix">
+                    	<h1>98.5</h1>
+                        <ul>
+                        	<li class="views"><strong>1100</strong><span>浏览</span></li>
+                            <li class="votes"><strong>1550</strong><span>投票</span></li>
+                            <li class="fav"><strong>365</strong><span>喜欢</span></li>
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="historical clearfix">
+                            <h2>99.8</h2>
+                            <div class="highnum">
+                            	最高脉冲<br /><strong>2012 02 05</strong>
+                            </div>
+                        </div>
+                        <div class="divider"> </div>
+                    </div>
+                   
+                    <div class="rightcard clearfix">
+                        <a href="#" class="button liked" style="display:none">感谢您的投票!</a>
+                        <a href="#" class="button like">投 票</a>
+                        <a href="#" class="button ifaved"><span></span></a>
+                    </div>
+                    
+                    <div class="more_picture">
+                    	<div class="more_picture_box">
+                        	<a href="#" class="set_pre" title="上一页"><span></span></a>	
+                            <table class="morep_tab" style="left:px;">
+                                <tr>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                    <td><a href="#"><img src="temp/avatar.jpg" /></a></td>
+                                </tr>
+                            </table>
+                            <a href="#" class="set_next" title="下一页"><span></span></a>
+                        </div>                        
+                    </div>
+                    
+                    <div class="rightcard clearfix">
+                    	<div class="intro">
+                        	Photographing snow may leave you waiting around, stamping your feet as the sun slowly rises in between anxious glances at the battery charge indicator… But being there for The Moment makes winter photography certainly worth all its rigid demands.
+                        </div>
+                        <div class="tags clearfix">
+                        	<a href="#">风景</a>
+                            <a href="#">晚上的钟</a>
+                            <a href="#">风景写生</a>
+                            <a href="#">风景</a>
+                            <a href="#">晚上的钟</a>
+                        </div>
+                        <div class="pictureinfo">
+                        	<table class="pinfo">
+                            	<tr>
+                                	<th class="pcam">相机</th>
+                                    <td>NIKON D7000</td>
+                                </tr>
+                                <tr>
+                                    <th class="pcl">镜头</th>
+                                    <td>17-40</td>
+                                </tr>
+                                <tr>   
+                                    <th class="pfl">焦距</th>
+                                    <td>11mm</td>
+                                </tr>
+                                <tr> 
+                                    <th class="pss">快门</th>
+                                    <td>10 sec</td>
+                                </tr>
+                                <tr>
+                                    <th class="pape">光圈</th>
+                                    <td>f/2.18</td>
+                                </tr>
+                                <tr> 
+                                    <th class="piso">ISO</th>
+                                    <td>6400</td>
+                                </tr>
+                                <tr> 
+                                    <th class="ptime">时间</th>
+                                    <td>2012 02 02</td>
+                                </tr>
+                                <tr> 
+                                    <th class="pcopy">版权</th>
+                                    <td>李万林</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+    <head>
+    <include file="public:head" />
+    <css file="__STATIC__/css/default/space.css" />
+</head>
+<body>
+    <div class="wrap">
+        <include file="public:header" />
+
+        <div class="content">
+            <div class="favphotographer clearfix">
+        	<div class="favper">
+            	<span><img src="temp/u1.jpg" /></span>
+                <div class="favpcont">
+                	<h3><a href="#">被遗忘的爱情</a></h3>
+                    <a href="#" class="btn_blue">加关注</a>
+                    <table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>25654</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>1454</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>269</td>
+                        </tr>
+                    </table>
+                    <div class="favppic">
+                    	<a href="#"><img src="temp/uppreview.jpg" /></a>
+                        <a href="#"><img src="temp/avatar.jpg" /></a>
+                        <a href="#"><img src="temp/album_item.jpg" /></a>
+                        <a href="#"><img src="temp/u2.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="favper">
+            	<span><img src="temp/u2.jpg" /></span>
+                <div class="favpcont">
+                	<h3><a href="#">被遗忘的爱情</a></h3>
+                    <a href="#" class="btn_blue">加关注</a>
+                    <table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>25654</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>1454</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>269</td>
+                        </tr>
+                    </table>
+                    <div class="favppic">
+                    	<a href="#"><img src="temp/uppreview.jpg" /></a>
+                        <a href="#"><img src="temp/avatar.jpg" /></a>
+                        <a href="#"><img src="temp/album_item.jpg" /></a>
+                        <a href="#"><img src="temp/u2.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="favper">
+            	<span><img src="temp/u3.jpg" /></span>
+                <div class="favpcont">
+                	<h3><a href="#">被遗忘的爱情</a></h3>
+                    <a href="#" class="btn_blue">加关注</a>
+                    <table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>25654</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>1454</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>269</td>
+                        </tr>
+                    </table>
+                    <div class="favppic">
+                    	<a href="#"><img src="temp/uppreview.jpg" /></a>
+                        <a href="#"><img src="temp/avatar.jpg" /></a>
+                        <a href="#"><img src="temp/album_item.jpg" /></a>
+                        <a href="#"><img src="temp/u2.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="favper">
+            	<span><img src="temp/u4.jpg" /></span>
+                <div class="favpcont">
+                	<h3><a href="#">被遗忘的爱情</a></h3>
+                    <a href="#" class="btn_blue">加关注</a>
+                    <table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>25654</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>1454</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>269</td>
+                        </tr>
+                    </table>
+                    <div class="favppic">
+                    	<a href="#"><img src="temp/uppreview.jpg" /></a>
+                        <a href="#"><img src="temp/avatar.jpg" /></a>
+                        <a href="#"><img src="temp/album_item.jpg" /></a>
+                        <a href="#"><img src="temp/u2.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="cbar clearfix">
+        	<a href="#" class="current">热度</a>
+            <a href="#">新加入</a>
+        </div>
+            <div class="piccont clearfix">
+                <div id="follow" style="display:">
+                    <div class="follow">
+                        <volist name="user_list" id="val">
+                        <div class="followcard">
+                            <div class="follow_avatar">
+                                <a href="{:U('space/index', array('uid'=>$val['id']))}"><img class="J_card fl r5" src="{:avatar($val['id'], 48)}" data-uid="{$val.id}" width="100" height="100" /></a>
+                            </div>
+                            <div class="follow_info">
+                                <h2><a href="{:U('space/index', array('uid'=>$val['id']))}">{$val.username}</a></h2>
+                                <p>
+                                <if condition="$visitor['id'] eq $user['id']">
+                                    <!--自己访问-->
+                                    <if condition="$val['mutually'] eq 0">
+                                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_ok">{:L('followed')} | </span>{:L('cancel')}</a>
+                                    <else/>
+                                        <a href="javascript:;" class="J_unfo_u green"><span class="fo_u_all">{:L('follow_mutually')} | </span>{:L('cancel')}</a>
+                                    </if>
+                                <else/>
+                                    <!--查看别人-->
+                                    <a href="javascript:;" class="J_fo_u fo_u_btn">{:L('follow')}</a>
+                                </if>
+                                </p>
+
+                                <!--p><a href="#">取消关注</a></p-->
+                            </div>
+                            <div class="follow_stats">
+                                <table>
+                                    <tr>
+                                        <th>浏览</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>喜欢</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收藏</th>
+                                        <td>125841</td>
+                                    </tr>
+                                    <tr>
+                                        <th>评论</th>
+                                        <td>125841</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="follow_photo">
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                                <a href="#"><img src="temp/avatar.jpg" /></a>
+                            </div>
+                        </div>
+                        </volist>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+<include file="public:footer" />
+</body>
+</html>

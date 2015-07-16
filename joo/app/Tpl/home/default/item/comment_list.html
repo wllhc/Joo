@@ -1,0 +1,21 @@
+<volist name="cmt_list" id="val">
+<div class="comment_show clearfix">
+<div class="comment_avatar">
+    <a href="{:U('space/index', array('uid'=>$val['uid']))}" target="_blank"><img src="{:avatar($val['uid'], 48)}" class="J_card avt" data-uid="{$val.uid}" /></a>
+</div>
+<div class="comment_body">
+      <div class="comment_attrib">
+          <a href="{:U('space/index', array('uid'=>$val['uid']))}" class="J_card n" data-uid="{$val.uid}" target="_blank">{$val.uname}</a>
+          <span>{$val.add_time|fdate}</span>
+      </div>
+      <div class="comment_text">{$val.info}</div>
+   </div>
+</div>
+
+
+<!--li> 
+    <a href="{:U('space/index', array('uid'=>$val['uid']))}" target="_blank"><img src="{:avatar($val['uid'], 48)}" class="J_card avt" data-uid="{$val.uid}" /></a>
+    <p><a href="{:U('space/index', array('uid'=>$val['uid']))}" class="J_card n" data-uid="{$val.uid}" target="_blank">{$val.uname}</a></p>
+    <p>{$val.info}<span>&nbsp;&nbsp;&nbsp;{$val.add_time|fdate}</span></p>
+</li-->
+</volist>

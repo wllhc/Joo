@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>{:L('message_title')} - JOO</title>
+<css file="__STATIC__/css/default/css.css" />
+<style>
+/*跳转提示*/
+.msg_wrap{ min-height: 320px; height: 320px;}
+.message_box{margin:60px auto;padding:20px;width:580px;border:3px solid #F2F2F2;background:#FFF;}
+.message_box a{ color: #369;}
+.msg_right,.msg_error,.msg_alert{padding:6px 0 6px 58px;min-height:40px;height:auto !important;height:40px;line-height:160%;font-size:14px;}
+.msg_error{ background-position: 10px -492px;}
+.msg_alert{ background-position: 10px -392px;}
+.msg_btnleft{margin-top:8px;}
+
+/*提示信息*/
+.green_alert, .pink_alert, .blue_alert{ display: block; margin: 5px 0; padding: 0 10px; vertical-align: middle; font-size: 14px; line-height: 35px; width: 668px;}
+.green_alert { background-color: #EEF8D1; border: 1px solid #87BB44; color: #608100;}
+.pink_alert { background-color: #FFE1E9; border: 1px solid #FF62A1; color: #DA1153;}
+.blue_alert { background-color: #D1F2F8; border: 1px solid #3CC1FF; color: #0B7CB6;}
+</style>
+<script src="__STATIC__/js/jquery/jquery.js"></script>
+</head>
+<body>
+<div class="wrap">
+<include file="public:header" />
+<div class="main_wrap">
+    <div class="msg_wrap">
+        <div class="message_box">
+            <div class="msg_right">
+                <p>{$message}</p>
+                <p class="msg_btnleft"><a href="{$jumpUrl}">{:L('msg_jump_desc')}</a></p>
+            </div>
+            <script language="javascript">
+                setTimeout("location.href='{$jumpUrl}';",{$waitSecond}*1000);
+            </script>
+        </div>
+    </div>
+</div>
+<include file="public:footer" />
+</body>
+</html>

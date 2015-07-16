@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<div class="wrap">
+<include file="public:header" />
+    <div class="content">
+        <div class="login_signup">
+            <div class="lsbox">
+            	<div class="lstitle clearfix"><b>登录到JOO</b><span>还没有JOO账号？<a href="{:U('user/register')}">创建</a>一个</span></div>
+                <div class="lscont clearfix">
+                    <div class="login_op">
+                    	<p class="hint">使用以下社交网站账号登录</p>
+                        <div class="ls_t">
+                            <volist name="oauth_list" id="val">
+                                <if condition="$val['code'] eq 'sina'">
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwwb">
+                                <elseif condition="$val['code'] eq 'qq'" />
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwqq">
+                                <else/>
+                                    <a href="{:U('oauth/index', array('mod'=>$val['code']))}" class="lwdb">
+                                </if>
+                                <span><b>{$val.name}</b></span></a>
+                            </volist>
+                        </div>
+                    </div>
+                    <div class="loginbox">
+                    	<p class="hint">使用JOO账号登录</p>
+                        <form id="Joo_login_form" action="{:U('user/login')}" method="post">
+                        <div class="loginform">
+                            <p><input type="text" name="username" id="J_name" class="logintext" placeholder="用户名" value="" /></p>
+                            <p><input type="password" name="password" id="J_pass" class="logintext" placeholder="密码" value="" /></p>
+                            <p class="clearfix">
+                            <a href="{:U('findpwd/index')}">忘登录记密码?</a>
+                            <input type="button" id="login_submit" class="loginbtn" value="登 录" /></p>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<include file="public:footer" />
+<script>
+$(function(){
+    //$.pinphp.user.login_validate($('#J_login_form')); //登陆验证
+
+    function Login() {
+        var __this = this;
+
+        this.init = function() {
+            $("#login_submit").bind("click", function() {
+                __this._loginAjax();
+            });
+            $("#Joo_login_form").submit(function() {
+                __this._login();
+                return false;
+            });
+        }
+
+        this._login = function() {
+            if ("" == $.trim(document.getElementById("J_name").value)) {
+            alert("dtst1");
+                __this._setStyle("J_name");
+                return false;
+            }
+            
+            if ("" == $.trim(document.getElementById("J_pass").value)) {
+            alert("dtst2");
+                __this._setStyle("J_pass");
+                return false;
+            }
+
+            alert("dtst");
+            document.getElementById("Joo_login_form").submit();
+            return true;
+        }
+
+        this._setStyle = function(dom_id) {
+            document.getElementById(dom_id).style.display = "1px solid red";
+            return;
+        }
+
+        this._loginAjax = function() {
+            $.ajax({
+                type: "post",
+                url:  PINER.root + '/?m=user&a=login',
+                data: $("#Joo_login_form").serialize(),
+                dataType: "json",
+                async: false,
+                error: function() {alert('error')},
+                success: function (dataRes) {
+                    switch (dataRes.status) {
+                        case 1: // 成功
+                            __this._setStyle('J_pass');
+                            break;
+                        case 0:
+                            __this._setStyle('J_name');
+                    }
+                    return false;
+                }
+            });
+
+            return false;
+        }
+    }
+
+    gLogin = new Login();
+    gLogin.init();
+});
+</script>
+</div>
+</body>
+</html>

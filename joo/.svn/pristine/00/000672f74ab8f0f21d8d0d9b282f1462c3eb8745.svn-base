@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <include file="public:head" />
+    <!--css file="__STATIC__/css/default/user.css" /-->
+</head>
+<body>
+
+<!--身份证认-->
+<div class="lightbox" style="display:none;">
+    <div class="lbbox">
+        <b class="closelightbox" onclick="toAutho()"></b>
+        <h2>身份证认证</h2>
+        <div class="upavatar clearfix">
+            <p class="upvb">请填写您的真实姓名与身份证号</p>
+            <div class="uptx">
+            	<input type="text" placeholder="请输入真实姓名" class="crtext cts" />
+            </div>
+            <div class="uptx">
+            	<input type="text" placeholder="请输入身份证号" class="crtext cts" />
+            </div>
+            <p class="upvb">请上传您的身份证照片和一张生活照片</p>
+            <div class="uptx clearfix"><a href="#" class="upabtn" id="upsfz"  onclick="document.getElementById('upsfz').click()" >上传身份证<input type="file" onchange="document.getElementById('upsfzr').innerHTML=this.value" /></a><span id="upsfzr"></span></div>
+            <div class="uptx clearfix"><a href="#" class="upabtn" id="upshz"  onclick="document.getElementById('upshz').click()" >上传生活照<input type="file" onchange="document.getElementById('upshzr').innerHTML=this.value"/></a><span id="upshzr"></span></div>
+
+            <!--div class="upcont">
+                <div class="upbg">
+                    <a href="#" class="upabtn">从电脑选取图片<input type="file" /></a>
+                </div>
+            </div>
+            <div class="upshow">
+                <div class="avatarshowb"><img src="temp/avatar.jpg" /></div>
+                <div class="avatarshows"><img src="temp/avatar.jpg" /></div>
+            </div-->
+
+            <div class="upaok"><a href="#" class="button like">OK,设置完成</a></div>
+        </div>
+    </div>
+</div>
+<script>
+    function toAutho(){
+        $('.lightbox').slideToggle();
+    }
+
+</script>
+
+<div class="wrap">
+    <include file="public:header" />
+    <div class="content">
+    	<div class="settings clearfix">
+            <include file="user:left" />
+            <div class="set_content">
+            	<div>
+                	<div class="settitle clearfix"><h3>成为摄影师</h3><span></span></div>
+                    <div class="arrwhite"></div>
+                    <div class="cardcontent">
+                   		<div class="rzc">
+                        	<!--h5>确认您登录的是焦距网http://www.joo.com.cn注意防范进入钓鱼网站，不要轻信各种即时通讯工具发送的商品或支付链接，谨防网购诈骗。</h5-->
+                            <div class="rzct">
+                            	<div class="whyyz">
+                                	<h4>怎么才能成为JOO的摄影师</h4>
+                                    <p>1.用于提升账号的安全性和信任级别。</p>
+                                    <p>2.不同于登录邮箱。当您选择“安全保护问题”找回您的安全邮箱。</p>
+                                    <p>3.用于提升账号的安全性和信任级别。</p>
+                                </div>
+                            </div>
+                            <div class="rzcc">
+                                <table class="rzctab">
+                                    <tr>
+                                        <tr>
+                                            <td width="150">
+                                                <div class="yzbox yzno">
+                                                    身份验证
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="yzz"><p>用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</p></div>
+                                            </td>
+                                            <td width="100" align="right"><a href="javascript:void(0);" onclick="toAutho();" class="btn_red">认证</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="yzbox yzyes">邮件认证</div></td>
+                                            <td>
+                                                <div class="yzz">
+                                                    <span>您的认证邮箱：<b>j****s@gmail.com</b></span>
+                                                    <p>不同于登录邮箱。当您选择“安全保护问题”找回密码时，填写正确的问题答案后，我们会将新密码发到您的安全邮箱。</p>
+                                                </div>
+                                            </td>
+                                            <td align="right"><a href="#" class="btn_blue">修改</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="yzbox yzyes">手机验证</div></td>
+                                            <td>
+                                                <div class="yzz">
+                                                    <span>您的认证手机：<b>13358****52</b></span>
+                                                    <p>不同于登录邮箱。当您选择“安全保护问题”找回密码时，填写正确的问题答案后，我们会将新密码发到您的安全邮箱。</p>
+                                                </div>
+                                            </td>
+                                            <td align="right"><a href="#" class="btn_blue">修改</a></td>
+                                        </tr>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<include file="public:footer" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/js/calendar/calendar-blue.css"/>
+<script src="__STATIC__/js/calendar/calendar.js"></script>
+<script src="__STATIC__/js/setting.js"></script>
+<script src="__STATIC__/js/minicity.js"></script>
+<script>
+    $(function(){
+        $.minicity( "#J_province", "#J_city", "<?php echo $info['province'];?>", "<?php echo $info['city'];?>");
+    });
+</script>
+</body>
+</html>

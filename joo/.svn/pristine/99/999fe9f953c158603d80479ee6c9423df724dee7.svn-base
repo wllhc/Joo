@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"><a href="#"></a></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+            </ul>
+            <ul class="nav rightnav">
+            	<li>
+                    <a href="#" class="topaddbtn">添加</a>
+                    <ul class="subnav">
+                        <li><a href="#">新照片</a></li>
+                        <li><a href="#">新专辑</a></li>
+                        <li><a href="#">新关注</a></li>
+                    </ul>
+                </li>
+                <!--li>
+                	<a href="#" class="topusrbtn clearfix"><b><img src="temp/avatar.jpg" /></b><span>心尘代谢</span></a>
+                    <ul class="subnav rnav">
+                        <li><a href="#">照片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                        <li class="navline"></li>
+                        <li><a href="#">设置</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li-->
+                <li>
+                	<a href="#" class="topusrbtn clearfix"><b><img src="temp/avatar.jpg" /></b><span>您好,游客</span></a>
+                    <ul class="subnav tlogin">
+                    	<li>
+                        	<div>
+                            	<p><input type="text" class="ttext"  placeholder="用户名"/></p>
+                                <p><input type="text" class="ttext" placeholder="密码" /></p>
+                                <p style="text-align:right"><input type="button" class="btngreen" value="登录" /></p>
+                            </div>
+                        </li>
+                        <li class="navline"></li>
+                        <li class="reg">
+                        	<p style="text-align:right">还没有JOO账号?<a href="#">创建一个</a></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="userbar">
+            <div class="card">
+                <div class="avatar">
+                    <img src="temp/avatar.jpg" />
+                </div>
+                <div class="username">
+                    <h2>王宏宇</h2>
+                    <a href="#">编辑我的资料</a>
+                </div>
+            </div>
+            <div class="card">
+            	<div class="hot_left">
+                	<h1>258041</h1>
+                    <p>热度</p>
+                </div>
+                <div class="hot_right">
+                	<table>
+                    	<tr>
+                        	<th>浏览</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>喜欢</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>收藏</th>
+                            <td>125841</td>
+                        </tr>
+                        <tr>
+                        	<th>评论</th>
+                            <td>125841</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card longcard"></div>
+            <div class="clear"></div>
+         </div>
+        <div class="cbar clearfix">
+        	<a href="#">图片</a>
+            <a href="#" class="current">专辑</a>
+            <a href="#">收藏</a>
+            <a href="#">关注</a>
+            <a href="#">关注我</a>
+        </div>
+        <div class="piccont clearfix">
+        	
+            
+            <!--div id="zhuaji" style="display:">
+            	<div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+                <div class="album clearfix">
+                	<div class="album_title">
+                    	<h1>西藏写生系列</h1>
+                        <p>创建于2011-05-05,<a href="#">12张图片</a></p>
+                    </div>
+                    <div class="album_skin">
+                    	<a href="#"><img src="temp/pic_prv.jpg" /></a>
+                    </div>
+                    <div class="album_morepic">
+                    	<div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item"><a href="#"><img src="temp/album_item.jpg" /></a></div>
+                        <div class="album_item album_link"><a href="#"><strong>+15</strong>更多图片</a></div>
+                    </div>
+                </div>
+            </div-->
+            
+            <div id="pic" class="clearfix" style="display:">
+            	<div class="albumbar clearfix">
+                	<h2><input type="text" value="西藏写生系列" /></h2>
+                    <!--div class="albumopt">
+                    	<a href="#" class="album_newpic btnblue">添加照片</a>
+                        <span class="album_set">
+                        	操作
+                            <div class="asdrop">
+                            	<a href="#">批量删除</a>
+                                <a href="#">编辑相册</a>
+                                <a href="#">删除相册</a>
+                            </div>
+                        </span>
+                    </div-->
+                </div>
+                <div class="abset clearfix">
+                	<span class="picchick">
+                    	<input type="checkbox" /> 全选
+                    </span>
+                    <span class="sbtn">
+                    	<b class="nosell">下架</b>
+                    </span>
+                    <span class="sbtn">
+                    	<b class="del">删除</b>
+                    </span>
+                    <span class="sbtn upmenu">
+                    	<b class="up">上传照片</b>
+                    </span>
+                </div>
+                
+                <!--div class="card maxcard"></div-->
+                <div class="picitem">
+                    <div class="picbox">
+                    	<div class="editpic">
+                        	<a href="#" class="picnosell" title="下架"></a>
+                            <a href="#" class="picdel" title="删除"></a>
+                            <a href="#" class="picedit" title="编辑"></a>
+                            <a href="#" class="piccover" title="设为专辑封面"></a>
+                           	<input type="checkbox" />
+                        </div>
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                    	<div class="editpic">
+                        	<a href="#" class="picnosell" title="下架"></a>
+                            <a href="#" class="picdel" title="删除"></a>
+                            <a href="#" class="picedit" title="编辑"></a>
+                            <a href="#" class="haspiccover" title="设为专辑封面"></a>
+                           	<input type="checkbox" />
+                        </div>
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                    	<div class="editpic">
+                        	<a href="#" class="picnosell" title="下架"></a>
+                            <a href="#" class="picdel" title="删除"></a>
+                            <a href="#" class="picedit" title="编辑"></a>
+                           	<input type="checkbox" />
+                        </div>
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="picitem">
+                    <div class="picbox">
+                    	<div class="editpic">
+                        	<a href="#" class="picnosell" title="下架"></a>
+                            <a href="#" class="picdel" title="删除"></a>
+                            <a href="#" class="picedit" title="编辑"></a>
+                           	<input type="checkbox" />
+                        </div>
+                        <a href="#"><img src="temp/pic_prv.jpg" /></a>
+                        <p>
+                            <a href="#" class="pictitle">东北坝上的早晨</a>
+                            <b class="grade">99.9</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

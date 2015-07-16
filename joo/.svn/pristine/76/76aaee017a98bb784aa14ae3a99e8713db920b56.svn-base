@@ -1,0 +1,294 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <include file="public:head"/>
+    <css file="__STATIC__/css/default/space.css"/>
+    <js file="__STATIC__/js/jquery/jquery.js"/>
+    <js file="__STATIC__/js/jquery/jquery.exif.js"/>
+    <js file="__STATIC__/js/photo_upload.js"/>
+</head>
+<script>
+    function g(id) {
+        return document.getElementById(id);
+    }
+
+    /**
+     * 获取元素的位置
+     *
+     * @param object e
+     *
+     * @return array [x.y]
+     */
+    function getPosition(e) {
+        var left = 0;
+        var top = 0;
+        /*
+         if (document.all) {
+         if (e.tagName === 'BODY') {
+         return [0, 0];
+         }
+
+         var pos = e.getBoundingClientRect();
+         return [pos.left + (document.documentElement.scrollLeft ?
+         document.documentElement.scrollLeft :
+         document.body.scrollLeft), pos.top + (document.documentElement.scrollTop ?
+         document.documentElement.scrollTop :
+         document.body.scrollTop)];
+         }
+         */
+
+        while (e.offsetParent) {
+            left += e.offsetLeft;
+            top += e.offsetTop;
+            e = e.offsetParent;
+        }
+
+        left += e.offsetLeft;
+        top += e.offsetTop;
+        return [left, top];
+    }
+    /**
+     * 向表单中添加内容
+     *
+     * @param info
+     */
+    function info_input(info) {
+        $('#Model').val(info.data.Model);
+        $('#FocalLength').val(info.data.FocalLength);
+        $('#ShutterSpeedValue').val(info.data.ShutterSpeedValue);
+        $('#ApertureValue').val(info.data.ApertureValue);
+        $('#ISOSpeedRatings').val(info.data.ISOSpeedRatings);
+        $('#DateTimeOriginal').val(info.data.DateTimeOriginal);
+        $('#FileName').val(info.data.FileName);
+        $('#img_name').val(info.data.FileName);
+        $('#img_path').val(info.data.savepath);
+
+    }
+
+    /**
+     * 初始化上传方法
+     *
+     */
+    window.onload = function () {
+        new EmUpload({
+            url: "{:U('upload/upajax')}",
+            url2: "{:U('upload/upstatus')}",
+            place: 'imginput',
+            onStart: function (key, file) {
+                //g('file_info').innerHTML = file;             
+            },
+            onProgress: function (key, file, total, current, speed) {
+                // g('speed').innerHTML = '(' + formatBytes(speed) + '/秒)'
+                //g('text').innerHTML = 
+                g('done').style.width = Math.ceil(current / total * 100) + '%';
+            },
+            onDone: function (key, file, file_info) {
+                info_input(file_info);
+                g('file_info').innerHTML = file;
+                //g('speed').innerHTML = '(0 B/秒)'
+                //g('text').innerHTML = 
+                g('done').style.width = '100%';
+            },
+            onError: function (key, file, error) {
+                // g('file_info').innerHTML = '';             
+                // g('speed').innerHTML = '(0 B/秒)'
+                //g('text').innerHTML = g('done').style.width =  '100%';
+                alert(error);
+            }
+        });
+
+    }
+
+    function previewImage(file) {
+        var MAXWIDTH = 100;
+        var MAXHEIGHT = 100;
+        //var div = document.getElementById('up_preview');
+        if (file.files && file.files[0]) {
+            //div.innerHTML = '<img id=imghead>';
+            var img = document.getElementById('imghead');
+            /*img.onload = function(){
+             var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+             img.width = rect.width;
+             img.height = rect.height;
+             img.style.marginLeft = rect.left+'px';
+             img.style.marginTop = rect.top+'px';
+             }*/
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                img.src = evt.target.result;
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        else {
+            var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead>';
+            var img = document.getElementById('imghead');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width + ',' + rect.height);
+            div.innerHTML = "<div id=divhead style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;margin-left:" + rect.left + "px;" + sFilter + src + "\"'></div>";
+        }
+    }
+    function clacImgZoomParam(maxWidth, maxHeight, width, height) {
+        var param = {top: 0, left: 0, width: width, height: height};
+        if (width > maxWidth || height > maxHeight) {
+            rateWidth = width / maxWidth;
+            rateHeight = height / maxHeight;
+
+            if (rateWidth > rateHeight) {
+                param.width = maxWidth;
+                param.height = Math.round(height / rateWidth);
+            } else {
+                param.width = Math.round(width / rateHeight);
+                param.height = maxHeight;
+            }
+        }
+
+        param.left = Math.round((maxWidth - param.width) / 2);
+        param.top = Math.round((maxHeight - param.height) / 2);
+        return param;
+    }
+
+</script>
+
+<body>
+<div class="wrap">
+    <include file="public:header"/>
+    <form id="img_form" action="{:U('upload/add_data')}" method="post">
+        <div class="content">
+
+            <div class="upload">
+                <div class="uploadpic" id="up_preview">
+                    <img id="imghead">
+
+                    <h1 class="uptext" style="display:">
+                        点击<a href="#">这里
+                        <input type="button" id="imginput" class="upfile"/>
+                    </a>从您的电脑里上传一张图片
+                    </h1>
+
+                    <h1 class="upbar"><b id="done" style="width:0%"></b><span id="file_info">0%</span></h1>
+                </div>
+
+                <div class="upbtnbar">
+                    <div class="up_preview">
+                        <img src="temp/uppreview.jpg"/>
+                    </div>
+                    <div class="up_btn">
+                        <input type="button" class="upbtn_del" value="删 除"/>
+                        <input type="button" class="upbtn_ok" onclick="document.getElementById('img_form').submit();"
+                               value="完成上传"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="picinfo">
+                <div class="info_t">
+                    <div class="info_t_l">
+                        <h3 class="infot">图片标题</h3>
+                        <input type="text" id="FileName" name="title" class="pictit_text" placeholder="设置标题"/>
+                        <input type="hidden" id='img_name' name='img' value="">
+                        <input type="hidden" id='img_path' name='save_path' value="">
+                    </div>
+                    <div class="info_t_r">
+                        <h3 class="infot">信息完整度</h3>
+
+                        <p>填写更多的信息可提高图片被发现的几率</p>
+
+                        <div class="infobar"><b style="width:50%"></b></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="infocont">
+                    <div class="picinfo_left">
+                        <h3 class="infot">EXIF信息</h3>
+                        <table class="tabexif">
+                            <tr>
+                                <th>相机</th>
+                                <td><input type="text" id="Model" name="Model" class="exiftext" value=''
+                                           placeholder="填写相机"/></td>
+                            </tr>
+                            <tr>
+                                <th>镜头</th>
+                                <td><input type="text" class="exiftext" placeholder="填写镜头"/></td>
+                            </tr>
+                            <tr>
+                                <th>焦距</th>
+                                <td><input type="text" id="FocalLength" name="FocalLength" class="exiftext"
+                                           placeholder="填写焦距"/></td>
+                            </tr>
+                            <tr>
+                                <th>快门速度</th>
+                                <td><input type="text" id="ShutterSpeedValue" name="ShutterSpeedValue" class="exiftext"
+                                           placeholder="填写快门速度"/></td>
+                            </tr>
+                            <tr>
+                                <th>光圈</th>
+                                <td><input type="text" id="ApertureValue" name="ApertureValue" class="exiftext"
+                                           placeholder="填写光圈"/></td>
+                            </tr>
+                            <tr>
+                                <th>ISO</th>
+                                <td><input type="text" id="ISOSpeedRatings" name="ISOSpeedRatings" class="exiftext"
+                                           placeholder="填写ISO"/></td>
+                            </tr>
+                            <tr>
+                                <th>拍摄时间</th>
+                                <td><input type="text" id="DateTimeOriginal" name="DateTimeOriginal" class="exiftext"
+                                           placeholder="填写拍摄时间"/></td>
+                            </tr>
+                        </table>
+                        <h3 class="infot">照片分类</h3>
+
+                        <div class="selbox">
+                            <select class="infoselect" name="cate_id" style="width:310px;">
+                                <volist name="item_cate" id="cate">
+                                    <option value="{$cate.id}">{$cate.name}</option>
+                                </volist>
+                            </select>
+                            <span></span>
+                        </div>
+                        <h3 class="infot">图片属于</h3>
+
+                        <div class="selbox">
+                            <select class="infoselect" style="width:310px;">
+                                <option>公共</option>
+                                <option>私人</option>
+                            </select>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="picinfo_center">
+                        <h3 class="infot">图片描述</h3>
+                        <textarea class="infodec" name="intro" placeholder="请填写图片描述"></textarea>
+
+                        <h3 class="infot">许可证</h3>
+
+                        <div class="selbox">
+                            <select class="infoselect" style="width:397px;">
+
+                                <option></option>
+
+                            </select>
+                            <span></span>
+                        </div>
+                        <h3 class="infot">标签</h3>
+                        <input type="text" class="tagtext" placeholder="填写标签以增加图片被发现的几率，多个用”，“分割"/>
+                    </div>
+                    <div class="picinfo_right">
+                        <h3 class="infot">拍摄地点</h3>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="footer"></div>
+</div>
+<script>
+
+</script>
+</body>
+</html>

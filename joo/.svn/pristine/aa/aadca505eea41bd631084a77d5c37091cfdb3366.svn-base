@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>joo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+
+<body>
+<div class="lightbox" style="display:none;">
+    <div class="lbbox" style="width:500px;">
+        <b class="closelightbox"></b>
+        <h2>上传您的头像</h2>
+        <!--div class="upavatar clearfix">
+            <p class="upvb">请上传清晰美观的个人近照，给别人留下美好的第一印象。</p>
+            <p class="upvs">支持jpg、gif、png格式，单张照片在10k-8M之间；</p>
+            <div class="upcont">
+                <div class="upbg">
+                    <a href="#" class="upabtn">从电脑选取图片<input type="file" /></a>
+                </div>
+            </div>
+            <div class="upshow">
+                <div class="avatarshowb"><img src="temp/avatar.jpg" /></div>
+                <div class="avatarshows"><img src="temp/avatar.jpg" /></div>
+            </div>
+            
+            <div class="upaok"><a href="#" class="button like">OK,设置完成</a></div>
+        </div-->
+    </div>
+</div>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_cont">
+        	<div class="logo"></div>
+            <ul class="nav">
+            	<li>
+                	<a href="#">图片</a><span></span>
+                    <ul class="subnav">
+                    	<li><a href="#">流行</a></li>
+                        <li><a href="#">热度排行</a></li>
+                        <li><a href="#">心情日志</a></li>
+                        <li><a href="#">走走</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摄影师</a></li>
+                <li><a href="#">展会</a></li>
+                <!--li class="me">
+                	<a href="#">我</a><span></span>
+                	 <ul class="subnav">
+                    	<li><a href="#">图片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                    </ul>    
+                </li-->
+            </ul>
+            
+            <ul class="nav rightnav">
+            	<li>
+                    <a href="#" class="topaddbtn">添加</a>
+                    <ul class="subnav">
+                        <li><a href="#">新照片</a></li>
+                        <li><a href="#">新专辑</a></li>
+                        <li><a href="#">新关注</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#" class="topusrbtn clearfix"><b><img src="temp/avatar.jpg" /></b><span>心尘代谢</span></a>
+                    <ul class="subnav">
+                        <li><a href="#">照片</a></li>
+                        <li><a href="#">专辑</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">关注</a></li>
+                        <li><a href="#">被关注</a></li>
+                        <li class="navline"></li>
+                        <li><a href="#">设置</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tsearch">
+            	<input type="text" class="headsearch" />
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="settings clearfix">
+        	<div class="set_sidebar">
+            	<dl>
+                	<dt><a href="#">账号设置</a></dt>
+                    <dd><a href="#">基本资料</a></dd>
+                    <dd><a href="#">修改密码</a></dd>
+                    <dd><a href="#">社交绑定</a></dd>
+                    <dt><a href="#">认证信息</a></dt>
+                    <dd></dd>
+                    <dd></dd>
+                    <dd></dd>
+                    <dd></dd>
+                    <dt><a href="#">账户信息</a></dt>
+                    
+                </dl>
+            </div>
+            <div class="set_content">
+            	<div>
+                	<div class="settitle clearfix"><h3>修改密码</h3><span></span></div>
+                    <div class="arrwhite"></div>
+                    <div class="cardcontent">
+                    	<div class="myinfo">
+                        	<div class="myavartar clearfix">
+                            	
+                                
+                                <div class="setbox mail">
+                             		<h2>原始密码:</h2>
+                                    <p><input type="text" class="setinput" /></p>
+                                </div>
+                                <div class="setbox mail">
+                             		<h2>新密码:</h2>
+                                    <p><input type="text" class="setinput" /></p>
+                                </div>
+                                <div class="setbox mail">
+                             		<h2>确认新密码:</h2>
+                                    <p><input type="text" class="setinput" /></p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="btndiv">
+                    	<a href="#" class="btngreen">保存 修改</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>
